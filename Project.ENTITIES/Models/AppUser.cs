@@ -1,0 +1,49 @@
+﻿using Project.ENTITIES.Enums;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Project.ENTITIES.Models
+{
+    public class AppUser : BaseEntity
+    {
+        public AppUser()
+        {
+            Role = UserRole.Member;
+            ActivationCode = Guid.NewGuid();
+        }
+
+        [Required(ErrorMessage = "{0} alanı boş geçilemez.")]
+        [Display(Name = "Kullanıcı Adı")]
+        [MinLength(3, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
+        [MaxLength(25, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
+        public string UserName { get; set; }
+        [Required(ErrorMessage = "{0} alanı boş geçilemez.")]
+        [Display(Name = "Parola")]
+        [MinLength(5, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
+        [MaxLength(20, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
+        public string Password { get; set; }
+        [Required(ErrorMessage = "{0} alanı boş geçilemez")]
+        [Display(Name = "Parola Onay")]
+        [Compare("Password", ErrorMessage = "Girdiğiniz parolalar uyuşmuyor.")]
+        public string ConfirmPassword { get; set; }
+        [Required(ErrorMessage = "{0} alanı boş geçilemez")]
+        [Display(Name = "Email")]
+        [RegularExpressionAttribute(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Girdiğiniz Email standart formatlara uymamaktadır.")]
+        public string Email { get; set; }
+        public UserRole Role { get; set; }
+        public Guid ActivationCode { get; set; }
+        public bool Active { get; set; }
+
+
+
+        //Relational Properties
+        public virtual UserProfile Profile { get; set; }
+        public virtual List<Order> Orders { get; set; }
+
+
+    }
+}
