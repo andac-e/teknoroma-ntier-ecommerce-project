@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\DataStatus.cs" />
-    <Compile Include="Enums\EmployeeType.cs" />
     <Compile Include="Enums\ExpenseType.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\IssueStatus.cs" />
