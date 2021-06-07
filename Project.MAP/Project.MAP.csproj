@@ -62,6 +62,7 @@
     <Compile Include="Options\OrderMap.cs" />
     <Compile Include="Options\ProductMap.cs" />
     <Compile Include="Options\ShipperMap.cs" />
+    <Compile Include="Options\SupplierMap.cs" />
     <Compile Include="Options\TerritoryMap.cs" />
     <Compile Include="Options\UserProfileMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
