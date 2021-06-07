@@ -51,11 +51,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Options\AppUserMap.cs" />
+    <Compile Include="Options\BaseMap.cs" />
+    <Compile Include="Options\CategoryMap.cs" />
+    <Compile Include="Options\EmployeeMap.cs" />
+    <Compile Include="Options\EmployeeTerritoryMap.cs" />
+    <Compile Include="Options\ExpenseMap.cs" />
+    <Compile Include="Options\IssueMap.cs" />
+    <Compile Include="Options\OrderDetailMap.cs" />
+    <Compile Include="Options\OrderMap.cs" />
+    <Compile Include="Options\ProductMap.cs" />
+    <Compile Include="Options\ShipperMap.cs" />
+    <Compile Include="Options\TerritoryMap.cs" />
+    <Compile Include="Options\UserProfileMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{5EBB8F42-819A-455B-A176-E0372A6EF666}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
