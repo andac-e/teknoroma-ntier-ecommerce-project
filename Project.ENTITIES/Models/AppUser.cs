@@ -43,6 +43,8 @@ namespace Project.ENTITIES.Models
         //Relational Properties
         public virtual UserProfile Profile { get; set; }
         public virtual List<Order> Orders { get; set; }
+        public virtual List<Issue> Issues { get; set; }
+
 
 
     }

@@ -44,16 +44,18 @@
   <ItemGroup>
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\EmployeeType.cs" />
+    <Compile Include="Enums\ExpenseType.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\IssueStatus.cs" />
     <Compile Include="Enums\OrderStatus.cs" />
-    <Compile Include="Enums\PaymentType.cs" />
     <Compile Include="Enums\UserRole.cs" />
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeTerritory.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\Issue.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Product.cs" />

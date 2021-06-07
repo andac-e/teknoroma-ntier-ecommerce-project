@@ -20,7 +20,6 @@ namespace Project.ENTITIES.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public DateTime OrderDate { get; set; }
-        public PaymentType? PaymentType { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public int AppUserID { get; set; }
         public int EmployeeID { get; set; }

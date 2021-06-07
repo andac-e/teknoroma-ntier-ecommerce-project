@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Enums
 {
-    public enum PaymentType
+    public enum ExpenseType
     {
-        CreditCard = 1,
-        GiftCard = 2,
-        Cash = 3
+        Invoice = 1,
+        TechnicalExpense = 2,
+        SalaryPayment = 3,
+        OtherExpense = 4
     }
 }
