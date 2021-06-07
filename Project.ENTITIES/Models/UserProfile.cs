@@ -17,6 +17,7 @@ namespace Project.ENTITIES.Models
         [Required(ErrorMessage = "{0} alanı boş geçilemez.")]
         [Display(Name = "Adres")]
         public string Address { get; set; }
+        public string TCNO { get; set; }
         public short? Age { get; set; }
         public string ImagePath { get; set; }
         public Gender? Gender { get; set; }

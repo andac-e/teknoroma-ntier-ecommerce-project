@@ -12,6 +12,7 @@ namespace Project.ENTITIES.Models
         public Order()
         {
             OrderDate = DateTime.Now;
+            OrderStatus = OrderStatus.Created;
         }
 
         public string ShippedAddress { get; set; }
@@ -19,12 +20,17 @@ namespace Project.ENTITIES.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public DateTime OrderDate { get; set; }
-        public PaymentType PaymentType { get; set; }
+        public PaymentType? PaymentType { get; set; }
+        public OrderStatus OrderStatus { get; set; }
         public int AppUserID { get; set; }
+        public int EmployeeID { get; set; }
+        public int ShipperID { get; set; }
 
 
         //Relational Properties
         public virtual AppUser AppUser { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Shipper Shipper { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }
 
 
