@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public class Category:BaseEntity
+    public class Category : BaseEntity
     {
         public Category()
         {
