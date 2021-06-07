@@ -10,13 +10,11 @@ namespace Project.COMMON.Tools
     public static class MailService
     {
 
-        public static void Send(string receiver, string password= "t81828384", string body="Test mesajıdır",string subject="Email Testi",string sender = "info.teknoroma@gmail.com")
+        public static void Send(string receiver, string password = "t81828384", string body = "Hesap Aktivasyon", string subject = "Email Testi", string sender = "destek.teknoroma@gmail.com")
         {
             MailAddress senderEmail = new MailAddress(sender);
             MailAddress receiverEmail = new MailAddress(receiver);
 
-            //Bizim email işlemlerimiz SMTP'ye göre yapılır... 
-            //Kullandığınız Gmail hesabının başka uygulamalar tarafından mesaj gönderme özelliğini açmalısınız...
 
             SmtpClient smtp = new SmtpClient()
             {
