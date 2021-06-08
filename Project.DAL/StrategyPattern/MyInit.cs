@@ -1,4 +1,5 @@
-﻿using Project.COMMON.Tools;
+﻿using Bogus.DataSets;
+using Project.COMMON.Tools;
 using Project.DAL.Context;
 using Project.ENTITIES.Models;
 using System;
@@ -155,7 +156,29 @@ namespace Project.DAL.StrategyPattern
             context.SaveChanges();
             #endregion
 
+            for (int i = 0; i < 10; i++)
+            {
+                Category c = new Category
+                {
+                    CategoryName = new Commerce("tr").Categories(1)[0],
+                    Description = new Lorem("tr").Sentence(10)
+                };
 
+                for (int j = 0; j < 20; j++)
+                {
+                    Product p = new Product
+                    {
+                        ProductName = new Commerce("tr").ProductName(),
+                        UnitPrice = Convert.ToDecimal(new Commerce("tr").Price()),
+                        UnitsInStock = 100,
+                        ImagePath = new Images().PicsumUrl(),
+                    };
+                    c.Products.Add(p);
+                }
+
+                context.Categories.Add(c);
+                context.SaveChanges();
+            }
         }
     }
 }
