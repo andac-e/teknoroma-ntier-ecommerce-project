@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Project.DAL.StrategyPattern
 {
-    public class MyInit:CreateDatabaseIfNotExists<MyContext>
+    public class MyInit : CreateDatabaseIfNotExists<MyContext>
     {
         protected override void Seed(MyContext context)
         {
@@ -19,8 +19,8 @@ namespace Project.DAL.StrategyPattern
             AppUser manager = new AppUser
             {
                 UserName = "manager",
-                Password = DantexCrypt.Crypt("manager"),
-                ConfirmPassword = DantexCrypt.Crypt("manager"),
+                Password = PasswordHasher.Crypt("manager"),
+                ConfirmPassword = PasswordHasher.Crypt("manager"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.Admin,
                 Active = true
@@ -47,8 +47,8 @@ namespace Project.DAL.StrategyPattern
             AppUser sale = new AppUser
             {
                 UserName = "sale",
-                Password = DantexCrypt.Crypt("sale"),
-                ConfirmPassword = DantexCrypt.Crypt("sale"),
+                Password = PasswordHasher.Crypt("sale"),
+                ConfirmPassword = PasswordHasher.Crypt("sale"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.SalesRepresentative,
                 Active = true
@@ -76,8 +76,8 @@ namespace Project.DAL.StrategyPattern
             AppUser wareHouse = new AppUser
             {
                 UserName = "ware",
-                Password = DantexCrypt.Crypt("ware"),
-                ConfirmPassword = DantexCrypt.Crypt("ware"),
+                Password = PasswordHasher.Crypt("ware"),
+                ConfirmPassword = PasswordHasher.Crypt("ware"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.WarehouseRepresentative,
                 Active = true
@@ -104,8 +104,8 @@ namespace Project.DAL.StrategyPattern
             AppUser acc = new AppUser
             {
                 UserName = "acc",
-                Password = DantexCrypt.Crypt("acc"),
-                ConfirmPassword = DantexCrypt.Crypt("acc"),
+                Password = PasswordHasher.Crypt("acc"),
+                ConfirmPassword = PasswordHasher.Crypt("acc"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.AccountingRepresentative,
                 Active = true
@@ -132,8 +132,8 @@ namespace Project.DAL.StrategyPattern
             AppUser tech = new AppUser
             {
                 UserName = "acc",
-                Password = DantexCrypt.Crypt("tech"),
-                ConfirmPassword = DantexCrypt.Crypt("tech"),
+                Password = PasswordHasher.Crypt("tech"),
+                ConfirmPassword = PasswordHasher.Crypt("tech"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.TechnicalServiceRepresentative,
                 Active = true
@@ -156,6 +156,35 @@ namespace Project.DAL.StrategyPattern
             context.SaveChanges();
             #endregion
 
+            #region MobileSalesRepresentative
+            AppUser mobile = new AppUser
+            {
+                UserName = "mobile",
+                Password = PasswordHasher.Crypt("mobile"),
+                ConfirmPassword = PasswordHasher.Crypt("mobile"),
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.MobileSalesRepresentative,
+                Active = true
+            };
+            context.AppUsers.Add(mobile);
+            context.SaveChanges();
+
+            Employee mobileSales = new Employee
+            {
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.Employee,
+                FirstName = "Fahri",
+                LastName = "Cepçi",
+                TCNO = "20000000006",
+                PhoneNumber = "05550001177",
+                Gender = ENTITIES.Enums.Gender.Male,
+                Salary = 6000
+            };
+            context.Employees.Add(mobileSales);
+            context.SaveChanges();
+            #endregion
+
+            #region FakeProducts
             for (int i = 0; i < 10; i++)
             {
                 Category c = new Category
@@ -178,7 +207,8 @@ namespace Project.DAL.StrategyPattern
 
                 context.Categories.Add(c);
                 context.SaveChanges();
-            }
+            } 
+            #endregion
         }
     }
 }

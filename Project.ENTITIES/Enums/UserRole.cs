@@ -20,8 +20,10 @@ namespace Project.ENTITIES.Enums
         AccountingRepresentative = 5,
         [Display(Name = "Teknik Servis")]
         TechnicalServiceRepresentative = 6,
-        Member = 7,
-        Visitor = 8,
-        Employee = 9
+        [Display(Name = "Mobil Satış")]
+        MobileSalesRepresentative = 7,
+        Member = 8,
+        Visitor = 9,
+        Employee = 10
     }
 }
