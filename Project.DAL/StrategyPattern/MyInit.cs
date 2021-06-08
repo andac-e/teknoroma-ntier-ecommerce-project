@@ -43,6 +43,18 @@ namespace Project.DAL.StrategyPattern
             #endregion
 
             #region SalesRepresentative
+            AppUser sale = new AppUser
+            {
+                UserName = "sale",
+                Password = DantexCrypt.Crypt("sale"),
+                ConfirmPassword = DantexCrypt.Crypt("sale"),
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.SalesRepresentative,
+                Active = true
+            };
+            context.AppUsers.Add(sale);
+            context.SaveChanges();
+
             Employee sales = new Employee
             {
                 Email = "andacerdogmus26@gmail.com",
@@ -52,6 +64,7 @@ namespace Project.DAL.StrategyPattern
                 TCNO = "20000000002",
                 PhoneNumber = "05550001133",
                 Gender = ENTITIES.Enums.Gender.Female,
+                MonthlySales = 15000,
                 Salary = 8000
             };
             context.Employees.Add(sales);
@@ -59,6 +72,18 @@ namespace Project.DAL.StrategyPattern
             #endregion
 
             #region WarehouseRepresentative
+            AppUser wareHouse = new AppUser
+            {
+                UserName = "ware",
+                Password = DantexCrypt.Crypt("ware"),
+                ConfirmPassword = DantexCrypt.Crypt("ware"),
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.WarehouseRepresentative,
+                Active = true
+            };
+            context.AppUsers.Add(wareHouse);
+            context.SaveChanges();
+
             Employee ware = new Employee
             {
                 Email = "andacerdogmus26@gmail.com",
@@ -75,23 +100,47 @@ namespace Project.DAL.StrategyPattern
             #endregion
 
             #region AccountingRepresentative
-            Employee acc = new Employee
+            AppUser acc = new AppUser
+            {
+                UserName = "acc",
+                Password = DantexCrypt.Crypt("acc"),
+                ConfirmPassword = DantexCrypt.Crypt("acc"),
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.AccountingRepresentative,
+                Active = true
+            };
+            context.AppUsers.Add(acc);
+            context.SaveChanges();
+
+            Employee accounting = new Employee
             {
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.Employee,
-                FirstName = "Kerim",
-                LastName = "Zulacı",
+                FirstName = "Feyza",
+                LastName = "Paragöz",
                 TCNO = "20000000004",
                 PhoneNumber = "05550001155",
                 Gender = ENTITIES.Enums.Gender.Female,
                 Salary = 6000
             };
-            context.Employees.Add(acc);
+            context.Employees.Add(accounting);
             context.SaveChanges();
             #endregion
 
             #region TechnicalServiceRepresentative
-            Employee tech = new Employee
+            AppUser tech = new AppUser
+            {
+                UserName = "acc",
+                Password = DantexCrypt.Crypt("tech"),
+                ConfirmPassword = DantexCrypt.Crypt("tech"),
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.TechnicalServiceRepresentative,
+                Active = true
+            };
+            context.AppUsers.Add(tech);
+            context.SaveChanges();
+
+            Employee service = new Employee
             {
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.Employee,
@@ -102,11 +151,11 @@ namespace Project.DAL.StrategyPattern
                 Gender = ENTITIES.Enums.Gender.Female,
                 Salary = 5500
             };
-            context.Employees.Add(tech);
+            context.Employees.Add(service);
             context.SaveChanges();
             #endregion
 
-            //todo: app-user ve profilleri oluştur,fake kategori ürün oluştur. kullanıcıları düzenle.
+
         }
     }
 }
