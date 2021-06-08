@@ -15,6 +15,31 @@ namespace Project.DAL.StrategyPattern
     {
         protected override void Seed(MyContext context)
         {
+            #region Admin
+            AppUser admin = new AppUser
+            {
+                UserName = "admin",
+                Password = PasswordHasher.Crypt("admin"),
+                ConfirmPassword = PasswordHasher.Crypt("admin"),
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.Admin,
+                Active = true
+            };
+            context.AppUsers.Add(admin);
+            context.SaveChanges();
+
+            UserProfile adminProfile = new UserProfile
+            {
+                FirstName = "Andaç",
+                LastName = "Erdoğmuş",
+                TCNO = "20000000000",
+                Age = 25,
+                Gender = ENTITIES.Enums.Gender.Male
+            };
+            context.UserProfiles.Add(adminProfile);
+            context.SaveChanges();
+            #endregion
+
             #region BranchManager
             AppUser manager = new AppUser
             {
@@ -22,7 +47,7 @@ namespace Project.DAL.StrategyPattern
                 Password = PasswordHasher.Crypt("manager"),
                 ConfirmPassword = PasswordHasher.Crypt("manager"),
                 Email = "andacerdogmus26@gmail.com",
-                Role = ENTITIES.Enums.UserRole.Admin,
+                Role = ENTITIES.Enums.UserRole.BranchManager,
                 Active = true
             };
             context.AppUsers.Add(manager);
