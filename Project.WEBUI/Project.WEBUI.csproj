@@ -132,6 +132,7 @@
     <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
     <Compile Include="AuthenticationClasses\VisitorAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1747,6 +1748,7 @@
     <Content Include="OuterTools\img\sm-img-2.jpg" />
     <Content Include="OuterTools\img\sm-img-3.jpg" />
     <Content Include="OuterTools\img\teknoroma-logo.png" />
+    <Content Include="OuterTools\img\undraw_well_done_i2wr.svg" />
     <Content Include="OuterTools\img\vector-lab.jpg" />
     <Content Include="OuterTools\js\additional-methods.min.js" />
     <Content Include="OuterTools\js\advanced-form-components.js" />
@@ -2013,6 +2015,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Register\RegisterNow.cshtml" />
+    <Content Include="Views\Register\RegisterOk.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

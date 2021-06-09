@@ -40,6 +40,31 @@ namespace Project.DAL.StrategyPattern
             context.SaveChanges();
             #endregion
 
+            #region User
+            AppUser user = new AppUser
+            {
+                UserName = "user",
+                Password = PasswordHasher.Crypt("user"),
+                ConfirmPassword = PasswordHasher.Crypt("user"),
+                Email = "andacerdogmus26@gmail.com",
+                Role = ENTITIES.Enums.UserRole.Member,
+                Active = true
+            };
+            context.AppUsers.Add(user);
+            context.SaveChanges();
+
+            UserProfile userProfile = new UserProfile
+            {
+                FirstName = "Cemre",
+                LastName = "Uzun",
+                TCNO = "20000000010",
+                Age = 25,
+                Gender = ENTITIES.Enums.Gender.Female
+            };
+            context.UserProfiles.Add(userProfile);
+            context.SaveChanges();
+            #endregion
+
             #region BranchManager
             AppUser manager = new AppUser
             {

@@ -50,8 +50,8 @@ a, a:hover, a:focus {
     max-width: 451px;
     margin: auto;
     background: #F8F8FB;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
 }
 
 .registration {
@@ -59,9 +59,6 @@ a, a:hover, a:focus {
     font-size: 13px;
 }
 
-    .registration > a:hover {
-        color: #000;
-    }
 
 .form-title {
     padding-bottom: 12px;
@@ -71,9 +68,9 @@ a, a:hover, a:focus {
 
 .form-title-text {
     font-size: 1.6rem;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
     margin: 0;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 
@@ -161,23 +158,25 @@ a, a:hover, a:focus {
 }
 
 .form-signin a {
-    color: #41cac0;
+    color: #2ea44f;
 }
 
     .form-signin a:hover {
-        color: #2ea44f;
+        color: #2f4f4f;
     }
 
 .login-wrap {
-    padding: 20px;
+    position: relative;
+    padding: 20px 40px;
     box-shadow: 0 12px 24px 0 rgba(248, 248, 251, 0.05);
 }
 
-.login-social-link {
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
+
+    .login-social-link {
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
 
     .login-social-link a {
         color: #fff;

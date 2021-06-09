@@ -1,0 +1,35 @@
+﻿@model AppUserVM
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="login-body">
+
+    <div class="container">
+
+        @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-signin" }))
+        {
+
+            <div class="login-wrap">
+                <div class="form-title">
+                    <h1 class="form-title-text text-center">Kayıt Ol</h1>
+                </div>
+                <label for="username" class="title">Kullanıcı Adı</label>
+                @Html.TextBoxFor(x => x.AppUser.UserName, new { @class = "form-control", placeholder = "Kullanıcı adınızı giriniz", autocomplete = "off" })
+                <label for="password" class="title">Parola</label>
+                @Html.PasswordFor(x => x.AppUser.Password, new { @class = "form-control", placeholder = "Parolanızı giriniz", autocomplete = "off" })
+                
+                <button class="bt-register bt-md btn-block mt-3">Hemen Kaydol</button>
+
+                <div class="text-center">
+                    <h4 class="registration">
+                        @Html.ActionLink("Zaten üye misiniz? Giriş yapmak için tıklayınız.", "Login", "Login")
+                    </h4>
+                </div>
+
+            </div>
+        }
+
+
+    </div>
+</div>
