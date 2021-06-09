@@ -1699,6 +1699,24 @@
     <Content Include="OuterTools\img\gallery\5.jpg" />
     <Content Include="OuterTools\img\gallery\6.jpg" />
     <Content Include="OuterTools\img\gallery\7.jpg" />
+    <Content Include="OuterTools\img\icons\amd.png" />
+    <Content Include="OuterTools\img\icons\apple.png" />
+    <Content Include="OuterTools\img\icons\asus.png" />
+    <Content Include="OuterTools\img\icons\beats-pill.png" />
+    <Content Include="OuterTools\img\icons\canon.png" />
+    <Content Include="OuterTools\img\icons\hp.png" />
+    <Content Include="OuterTools\img\icons\ibm.png" />
+    <Content Include="OuterTools\img\icons\intel.png" />
+    <Content Include="OuterTools\img\icons\logitech.png" />
+    <Content Include="OuterTools\img\icons\nvidia.png" />
+    <Content Include="OuterTools\img\icons\philips.png" />
+    <Content Include="OuterTools\img\icons\playstation.png" />
+    <Content Include="OuterTools\img\icons\pngegg.png" />
+    <Content Include="OuterTools\img\icons\seagate.png" />
+    <Content Include="OuterTools\img\icons\sony.png" />
+    <Content Include="OuterTools\img\icons\windows-logo.png" />
+    <Content Include="OuterTools\img\icons\xbox-logo.png" />
+    <Content Include="OuterTools\img\icons\xiaomi.png" />
     <Content Include="OuterTools\img\left-arrow.png" />
     <Content Include="OuterTools\img\lock-bg.jpg" />
     <Content Include="OuterTools\img\mail-avatar.jpg" />
@@ -1990,6 +2008,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

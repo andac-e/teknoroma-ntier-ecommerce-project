@@ -83,10 +83,18 @@ body {
     align-items: center;
     justify-content: center;
     background: transparent;
+    border-radius: 5px;
+    transition: background 0.2s ease;
 }
 
     #mainNav .navbar-nav .nav-item:hover {
         color: fade(#fff, 80%);
+        background: #eaeaea;
+    }
+
+    #mainNav .navbar-nav .nav-item:last-child:hover {
+        color: fade(#fff, 80%);
+        background: transparent;
     }
 
     #mainNav .navbar-nav .nav-item:active,

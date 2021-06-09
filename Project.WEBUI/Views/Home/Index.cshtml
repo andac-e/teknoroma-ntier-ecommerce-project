@@ -3,14 +3,278 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<main>
+    <div class="hero-wrapper">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-text text-center">
+                    <h1 class="hero-title hero-1">
+                        Üye ol.
+                        <span class="hero-title main-text blue-gradient">Üye ol.</span>
+                    </h1>
+                    <h1 class="hero-title hero-1">
+                        Sepete at.
+                        <span class="hero-title main-text purple-gradient">Sepete at.</span>
+                    </h1>
+                    <h1 class="hero-title hero-1">
+                        Kapında.
+                        <span class="hero-title main-text orange-gradient">Kapında.</span>
+                    </h1>
 
-<div class="jumbotron">Index</div>
-<div class="jumbotron">Index</div>
-<div class="jumbotron">Index</div>
-<div class="jumbotron">Index</div>
-<div class="jumbotron">Index</div>
-<div class="jumbotron">Index</div>
-<div class="jumbotron">Index</div>
-<div class="jumbotron">Index</div>
+                    <div class="hero-buttons spacer">
+                        <div class="hero-btn">
+                            <a href="@Url.Action("ShoppingList","Shopping")">
+                                <button class="bt bt-lg">Alışverişe Başla</button>
+                            </a>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="@Url.Action("Contact","Home")">
+                                <button class="bt-secondary">İletişime Geç</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="spacer">
+                        <h2 class="hero-description">
+                            Teknoroma, perakende, bayi ve alternatif satış kanalları ile toplam 55 mağaza, 30 departman, 20 merkez personeli ile toplam 258 çalışandan oluşan ve geniş ürün yelpazesiyle birçok marka seçeneği sunan Türkiye’nin sayılı elektronik marketlerindendir.
 
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tiny-heading text-center">
+                <small>teknoroma'yı keşfet</small>
+            </div>
+
+            <span class="line blue-line"></span>
+            <div class="section">
+                <span class="section-span blue-nm">1</span>
+                <h3 class="section-text">
+                    <span class="span-title blue-nm">Ürünler</span>
+                </h3>
+            </div>
+
+            <h4 class="section-title">Yüzlerce ürünü keşfet</h4>
+
+            <div class="text-center">
+                <p class="section-description">
+                    Teknoroma tedarikçilerinden aldığı ürünleri, uygun fiyatlarla
+                    müşterisine sunan aynı zamanda bu ürünlerin bakım ve onarım
+                    hizmetlerini veren çok yönlü bir kuruluştur. Ürün yelpazesinin
+                    büyük bir bölümünü bilgisayar donanımları, cep telefonları,
+                    kameralar, fotoğraf makinaları gibi donanımlarla, bazı paket
+                    yazılımlar oluşturur. En iyi ürünleri, en uygun fiyatlarla ve en
+                    hızlı şekilde sizlere ulaştırmak için buradayız.
+                </p>
+            </div>
+
+            <div class="section-img">
+                <img src="~/OuterTools/img/1.png" alt="" />
+                <h4 class="img-title">En iyi, en uygun, en hızlı</h4>
+                <span id="slide"></span>
+            </div>
+
+            <!-- Brands Section -->
+            <div class="tiny-heading text-center">
+                <small>onlarca ünlü marka</small>
+            </div>
+
+            <span class="line purple-line"></span>
+            <div class="section">
+                <span class="section-span purple-nm">2</span>
+                <h3 class="section-text">
+                    <span class="span-title purple-nm">Markalar</span>
+                </h3>
+            </div>
+
+            <h4 class="section-title">Aradığın markalar</h4>
+            <div class="section-img">
+                <img src="~/OuterTools/img/2.png" alt="" />
+
+                <div class="slider">
+                    <div class="slider-track">
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/apple.png" width="64" height="64" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/xbox-logo.png"
+                                 width="60"
+                                 height="60"
+                                 alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/amd.png" width="60" height="60" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/asus.png" width="128" height="128" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/beats-pill.png"
+                                 width="64"
+                                 height="64"
+                                 alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/canon.png" width="128" height="128" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/hp.png" width="64" height="64" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/ibm.png" width="128" height="128" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/intel.png" width="80" height="80" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/logitech.png"
+                                 width="72"
+                                 height="72"
+                                 alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/nvidia.png" width="64" height="64" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/philips.png"
+                                 width="128"
+                                 height="128"
+                                 alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/playstation.png"
+                                 width="64"
+                                 height="64"
+                                 alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/pngegg.png"
+                                 width="128"
+                                 height="128"
+                                 alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/seagate.png" width="64" height="64" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/sony.png" width="100" height="100" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/windows-logo.png"
+                                 width="64"
+                                 height="64"
+                                 alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="~/OuterTools/img/icons/xiaomi.png" width="60" height="60" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customers section -->
+            <div class="tiny-heading text-center">
+                <small>bİnlerce mutlu müşterİ</small>
+            </div>
+
+            <span class="line orange-line"></span>
+            <div class="section">
+                <span class="section-span orange-nm">3</span>
+                <h3 class="section-text">
+                    <span class="span-title orange-nm">Memnuniyet</span>
+                </h3>
+            </div>
+
+            <h4 class="section-title">Her ziyaretçi için ayrıcalık</h4>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <section class="statistics">
+            <div class="stats">
+                <div class="stats-item">
+                    <p class="highlight">55</p>
+                    <span class="description">Mağaza</span>
+                </div>
+                <div class="stats-item">
+                    <p class="highlight">30</p>
+                    <span class="description">Departman</span>
+                </div>
+                <div class="stats-item">
+                    <p class="highlight">10B+</p>
+                    <span class="description">tamamlanan SİPARİŞ</span>
+                </div>
+                <div class="stats-item">
+                    <p class="highlight">%99.99</p>
+                    <span class="description">memnunİyet</span>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="hero-wrapper">
+        <div class="container">
+            <div class="hero-container">
+                <div class="section-img">
+                    <img src="~/OuterTools/img/3.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        // array with texts to type in typewriter
+        var dataText = [
+            "tabletler.",
+            "bilgisayarlar.",
+            "akıllı telefonlar.",
+            "kameralar.",
+            "yazılımlar.",
+            "fotoğraf makinaları.",
+            "bilgisayar bileşenleri.",
+        ];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, i, fnCallback) {
+            // chekc if text isn't finished yet
+            if (i < text.length) {
+                // add next character to h1
+                document.querySelector("#slide").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+                // wait for a while and call this function again for next character
+                setTimeout(function () {
+                    typeWriter(text, i + 1, fnCallback);
+                }, 100);
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == "function") {
+                // call callback after timeout
+                setTimeout(fnCallback, 2500);
+            }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+            if (typeof dataText[i] == "undefined") {
+                setTimeout(function () {
+                    StartTextAnimation(0);
+                }, 100);
+            }
+            // check if dataText[i] exists
+            if (i < dataText[i].length) {
+                // text exists! start typewriter animation
+                typeWriter(dataText[i], 0, function () {
+                    // after callback (and whole text has been animated), start next text
+                    StartTextAnimation(i + 1);
+                });
+            }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+    });
+</script>

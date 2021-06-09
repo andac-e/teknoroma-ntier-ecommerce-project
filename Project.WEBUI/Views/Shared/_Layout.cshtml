@@ -42,17 +42,21 @@
                         <a href="@Url.Action("Contact","Home")" class="text-secondary nav-link js-scroll-trigger">İletişim</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="@Url.Action("ShoppingList","Shopping")" class="text-secondary nav-link js-scroll-trigger">E-Mağaza</a>
+                    </li>
+
                     <!-- user login dropdown start-->
                     @if (Session["member"] != null)
                     {
                         //todo: sepet butonunu düzenle
                         <li class="nav-item">
-                            <a href="@Url.Action("CartPage","Shopping")" class="bt bt-md nav-link cart-btn js-scroll-trigger">Kayıt Ol</a>
+                            <a href="@Url.Action("CartPage","Shopping")" class="btn btn-danger nav-link cart-btn js-scroll-trigger">Sepetim</a>
                         </li>
 
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" src="~/OuterTools/img/avatar1_small.jpg">
+                                <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
                                 <span class="username">@Model.AppUser.UserName</span>
                                 <b class="caret"></b>
                             </a>
@@ -79,11 +83,8 @@
         </div>
     </nav>
 
-    <div class="container body-content">
+    
         @RenderBody()
-        <hr />
-
-    </div>
 
     <!-- Footer -->
     <footer class="footer">

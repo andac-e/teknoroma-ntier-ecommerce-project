@@ -13,5 +13,10 @@ namespace Project.WEBUI.Controllers
         {
             return View();
         }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }
