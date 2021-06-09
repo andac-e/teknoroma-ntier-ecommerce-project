@@ -1,4 +1,6 @@
-﻿@model AppUserVM
+﻿@{
+    AppUser user = (AppUser)HttpContext.Current.Session["member"];
+}
 
 <!DOCTYPE html>
 <html>
@@ -52,19 +54,20 @@
                     {
                         //todo: sepet butonunu düzenle
                         <li class="nav-item">
-                            <a href="@Url.Action("CartPage","Shopping")" class="btn btn-danger nav-link cart-btn js-scroll-trigger">Sepetim</a>
+                            <a href="@Url.Action("CartPage","Shopping")" class="bt bt-register nav-link cart-btn js-scroll-trigger">Sepetim</a>
                         </li>
 
-                        <li class="dropdown">
+                        <li class="dropdown mx-2">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
-                                <span class="username">@Model.AppUser.UserName</span>
+                                <span class="username">@user.UserName</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
-                                <li><a href="#"><i class=" icon-suitcase"></i>Profil</a></li>
-                                <li><a href="#"><i class="icon-bell-alt"></i>Bildirimler</a></li>
+                                <li><a href="#">Profil</a></li>
+                                <li><a href="#">Bildirimler</a></li>
+                                <li><a href="#">Siparişlerim</a></li>
                                 <li><a href="@Url.Action("LogOut","Login")"><i class="icon-key"></i>Çıkış Yap</a></li>
                             </ul>
                         </li>
@@ -84,8 +87,8 @@
         </div>
     </nav>
 
-    
-        @RenderBody()
+
+    @RenderBody()
 
     <!-- Footer -->
     <footer class="footer">
@@ -121,6 +124,7 @@
             </span>
         </div>
     </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

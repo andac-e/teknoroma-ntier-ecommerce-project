@@ -35,6 +35,7 @@ namespace Project.WEBUI.Controllers
             UserProfile profile = apvm.Profile;
 
             user.Password = PasswordHasher.Crypt(user.Password);
+            user.ConfirmPassword = PasswordHasher.Crypt(user.ConfirmPassword);
 
             if (_apRep.Any(x => x.UserName == user.UserName))
             {
@@ -77,7 +78,7 @@ namespace Project.WEBUI.Controllers
                 return RedirectToAction("Login", "Home");
             }
             TempData["HesapAktif"] = "Hesabınız bulunamadı.";
-            return RedirectToAction("Login", "Home");
+            return RedirectToAction("Login", "Login");
         }
 
         public ActionResult RegisterOk()

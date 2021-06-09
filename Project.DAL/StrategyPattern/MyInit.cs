@@ -30,6 +30,7 @@ namespace Project.DAL.StrategyPattern
 
             UserProfile adminProfile = new UserProfile
             {
+                ID = admin.ID,
                 FirstName = "Andaç",
                 LastName = "Erdoğmuş",
                 TCNO = "20000000000",
@@ -43,9 +44,9 @@ namespace Project.DAL.StrategyPattern
             #region User
             AppUser user = new AppUser
             {
-                UserName = "user",
-                Password = PasswordHasher.Crypt("user"),
-                ConfirmPassword = PasswordHasher.Crypt("user"),
+                UserName = "user1",
+                Password = PasswordHasher.Crypt("user1"),
+                ConfirmPassword = PasswordHasher.Crypt("user1"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.Member,
                 Active = true
@@ -55,6 +56,7 @@ namespace Project.DAL.StrategyPattern
 
             UserProfile userProfile = new UserProfile
             {
+                ID = user.ID,
                 FirstName = "Cemre",
                 LastName = "Uzun",
                 TCNO = "20000000010",
@@ -96,9 +98,9 @@ namespace Project.DAL.StrategyPattern
             #region SalesRepresentative
             AppUser sale = new AppUser
             {
-                UserName = "sale",
-                Password = PasswordHasher.Crypt("sale"),
-                ConfirmPassword = PasswordHasher.Crypt("sale"),
+                UserName = "sales",
+                Password = PasswordHasher.Crypt("sales"),
+                ConfirmPassword = PasswordHasher.Crypt("sales"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.SalesRepresentative,
                 Active = true
@@ -125,9 +127,9 @@ namespace Project.DAL.StrategyPattern
             #region WarehouseRepresentative
             AppUser wareHouse = new AppUser
             {
-                UserName = "ware",
-                Password = PasswordHasher.Crypt("ware"),
-                ConfirmPassword = PasswordHasher.Crypt("ware"),
+                UserName = "ware1",
+                Password = PasswordHasher.Crypt("ware1"),
+                ConfirmPassword = PasswordHasher.Crypt("ware1"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.WarehouseRepresentative,
                 Active = true
@@ -153,9 +155,9 @@ namespace Project.DAL.StrategyPattern
             #region AccountingRepresentative
             AppUser acc = new AppUser
             {
-                UserName = "acc",
-                Password = PasswordHasher.Crypt("acc"),
-                ConfirmPassword = PasswordHasher.Crypt("acc"),
+                UserName = "acc11",
+                Password = PasswordHasher.Crypt("acc11"),
+                ConfirmPassword = PasswordHasher.Crypt("acc11"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.AccountingRepresentative,
                 Active = true
@@ -181,9 +183,9 @@ namespace Project.DAL.StrategyPattern
             #region TechnicalServiceRepresentative
             AppUser tech = new AppUser
             {
-                UserName = "acc",
-                Password = PasswordHasher.Crypt("tech"),
-                ConfirmPassword = PasswordHasher.Crypt("tech"),
+                UserName = "tech1",
+                Password = PasswordHasher.Crypt("tech1"),
+                ConfirmPassword = PasswordHasher.Crypt("tech1"),
                 Email = "andacerdogmus26@gmail.com",
                 Role = ENTITIES.Enums.UserRole.TechnicalServiceRepresentative,
                 Active = true

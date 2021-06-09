@@ -7,23 +7,33 @@
 
     <div class="container">
 
+
+
         @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-signin" }))
         {
 
+            <h5 class="text-center">@ViewBag.KullaniciYok</h5>
+            <h5 class="text-center">@TempData["HesapAktifMi"]</h5>
+
+            if (ViewBag.AktifDegil != null)
+            {
+                <h5 class="text-center">@ViewBag.AktifDegil</h5>
+            }
+
             <div class="login-wrap">
                 <div class="form-title">
-                    <h1 class="form-title-text text-center">Kayıt Ol</h1>
+                    <h1 class="form-title-text text-center">Giriş Yap</h1>
                 </div>
                 <label for="username" class="title">Kullanıcı Adı</label>
                 @Html.TextBoxFor(x => x.AppUser.UserName, new { @class = "form-control", placeholder = "Kullanıcı adınızı giriniz", autocomplete = "off" })
                 <label for="password" class="title">Parola</label>
                 @Html.PasswordFor(x => x.AppUser.Password, new { @class = "form-control", placeholder = "Parolanızı giriniz", autocomplete = "off" })
-                
-                <button class="bt-register bt-md btn-block mt-3">Hemen Kaydol</button>
+
+                <button class="bt-login bt-md btn-block mt-3">Giriş Yap</button>
 
                 <div class="text-center">
                     <h4 class="registration">
-                        @Html.ActionLink("Zaten üye misiniz? Giriş yapmak için tıklayınız.", "Login", "Login")
+                        @Html.ActionLink("Üyeliğiniz yok mu? Üye olmak için tıklayınız.", "RegisterNow", "Register", new { @class = "login-text" })
                     </h4>
                 </div>
 

@@ -165,6 +165,14 @@ a, a:hover, a:focus {
         color: #2f4f4f;
     }
 
+.form-signin .login-text {
+    color: darkblue;
+}
+
+    .form-signin .login-text:hover {
+        color: #1F1F3E;
+    }
+
 .login-wrap {
     position: relative;
     padding: 20px 40px;
@@ -172,11 +180,11 @@ a, a:hover, a:focus {
 }
 
 
-    .login-social-link {
-        display: inline-block;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
+.login-social-link {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
 
     .login-social-link a {
         color: #fff;
