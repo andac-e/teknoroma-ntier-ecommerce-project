@@ -136,6 +136,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ShoppingTools\Cart.cs" />
+    <Compile Include="Models\ShoppingTools\CartItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VMClasses\AppUserVM.cs" />
     <Compile Include="VMClasses\CategoryVM.cs" />
@@ -2010,12 +2012,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Register\RegisterNow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\ShoppingTools\" />
     <Folder Include="OuterTools\assets\jquery-file-upload\server\php\files\thumbnail\" />
-    <Folder Include="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -19,12 +19,12 @@ namespace Project.ENTITIES.Models
         [Required(ErrorMessage = "{0} alanı boş geçilemez.")]
         [Display(Name = "Kullanıcı Adı")]
         [MinLength(3, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
-        [MaxLength(25, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
+        [MaxLength(25, ErrorMessage = "{0} maksimum {1} karakter olabilir.")]
         public string UserName { get; set; }
         [Required(ErrorMessage = "{0} alanı boş geçilemez.")]
         [Display(Name = "Parola")]
         [MinLength(5, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
-        [MaxLength(20, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
+        [MaxLength(20, ErrorMessage = "{0} maksimum {1} karakter olabilir.")]
         public string Password { get; set; }
         [Required(ErrorMessage = "{0} alanı boş geçilemez")]
         [Display(Name = "Parola Onay")]

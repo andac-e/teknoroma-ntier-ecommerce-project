@@ -14,8 +14,6 @@ namespace Project.ENTITIES.Models
         [Display(Name = "İsim")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        [Required(ErrorMessage = "{0} alanı boş geçilemez.")]
-        [Display(Name = "Adres")]
         public string Address { get; set; }
         public string TCNO { get; set; }
         public short? Age { get; set; }

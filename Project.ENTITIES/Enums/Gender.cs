@@ -14,6 +14,8 @@ namespace Project.ENTITIES.Enums
         [Display(Name = "Erkek")]
         Male = 2,
         [Display(Name = "Diğer")]
-        Other = 3
+        Other = 3,
+        [Display(Name = "Belirtmek İstemiyorum")]
+        RatherNotSay = 4
     }
 }
