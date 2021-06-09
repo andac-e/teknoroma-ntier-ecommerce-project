@@ -1,23 +1,16 @@
-/*
-Template Name: Flat Lab Dashboard build with Bootstrap v3.0.2
-Template Version: 1.2.0
-Author: Mosaddek Hossain
-Website: http://thevectorlab.net/
-*/
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap");
 
-/* Import fonts */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Inter", sans-serif;
+}
 
 body {
-    color: #797979;
-    background: #f1f2f7;
-    /*font-family: 'Open Sans', sans-serif;*/
-    font-family: 'Poppins', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
-    font-size: 13px;
 }
 
 ul li {
@@ -30,18 +23,11 @@ a, a:hover, a:focus {
 }
 
 ::selection {
-    background: #FF6C60;
-    color: #fff;
+    background-color: #79ffe1;
 }
 
 ::-moz-selection {
-    background: #FF6C60;
-    color: #fff;
-}
-
-#container {
-    width: 100%;
-    height: 100%;
+    background-color: #79ffe1;
 }
 
 /*login page*/
@@ -353,7 +339,7 @@ ul.sidebar-menu li {
     margin-left: 210px;
 }
 
-.header, .footer {
+/*.header, .footer {
     min-height: 60px;
     padding: 0 15px;
 }
@@ -363,7 +349,7 @@ ul.sidebar-menu li {
     left: 0;
     right: 0;
     z-index: 1002;
-}
+}*/
 
 .white-bg {
     background: #fff;
