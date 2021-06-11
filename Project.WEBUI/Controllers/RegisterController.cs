@@ -75,7 +75,7 @@ namespace Project.WEBUI.Controllers
                 aktifEdilecek.Active = true;
                 _apRep.Update(aktifEdilecek);
                 TempData["HesapAktif"] = "Hesabınız aktif hale getirilmiştir. İyi alışverişler dileriz...";
-                return RedirectToAction("Login", "Home");
+                return RedirectToAction("Login", "Login");
             }
             TempData["HesapAktif"] = "Hesabınız bulunamadı.";
             return RedirectToAction("Login", "Login");

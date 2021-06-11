@@ -258,6 +258,10 @@ a, a:hover, a:focus {
 }
 /*---*/
 
+.username {
+    color: #333;
+}
+
 .nav-collapse.collapse {
     display: inline;
 }
@@ -463,6 +467,10 @@ ul.top-menu > li > a {
     z-index: 100;
 }
 
+.dropdown {
+    margin: auto 0;
+}
+
 .dropdown-menu.extended {
     max-width: 300px !important;
     min-width: 160px !important;
@@ -639,8 +647,8 @@ ul.top-menu > li > a {
 }
 
 .top-nav .username {
-    font-size: 13px;
-    color: #555555;
+    font-size: 12px;
+    color: #333;
 }
 
 .top-nav ul.top-menu > li > a {
