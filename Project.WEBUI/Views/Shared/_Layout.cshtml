@@ -54,7 +54,7 @@
                     {
                         //todo: sepet butonunu düzenle
                         <li class="nav-item">
-                            <a href="@Url.Action("CartPage","Shopping")" class="bt bt-register nav-link cart-btn js-scroll-trigger">Sepetim</a>
+                            <a href="@Url.Action("CartPage","Shopping")" class="bt bt-register nav-link cart-btn js-scroll-trigger">Sepetim<span class="badge badge-light ">@TempData["adet"]</span></a>
                         </li>
 
                         <li class="dropdown mx-2">
