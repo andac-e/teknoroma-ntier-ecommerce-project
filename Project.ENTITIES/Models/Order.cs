@@ -24,9 +24,9 @@ namespace Project.ENTITIES.Models
         public DateTime OrderDate { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public int? AppUserID { get; set; }
-        public int EmployeeID { get; set; }
-        public int ShipperID { get; set; }
-        public float Discount { get; set; }
+        public int? EmployeeID { get; set; }
+        public int? ShipperID { get; set; }
+        public float? Discount { get; set; }
 
 
         public void MakeDiscount()

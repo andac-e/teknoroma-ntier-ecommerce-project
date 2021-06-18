@@ -40,7 +40,43 @@ namespace Project.WEBUI.Controllers
             if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.Admin)
             {
                 Session["admin"] = user;
-                return RedirectToAction("UserList", "AppUser", new { Area = "Admin" });
+                return RedirectToAction("UserList", "AppUser", new { Area = "Administration" });
+            }
+
+            else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.BranchManager)
+            {
+                Session["manager"] = user;
+                return RedirectToAction("CategoryList", "Category", new { Area = "Administration" });
+            }
+
+            else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.SalesRepresentative)
+            {
+                Session["sale"] = user;
+                return RedirectToAction("OrderList", "Order", new { Area = "Administration" });
+            }
+
+            else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.WarehouseRepresentative)
+            {
+                Session["ware"] = user;
+                return RedirectToAction("ProductList", "Product", new { Area = "Administration" });
+            }
+
+            else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.AccountingRepresentative)
+            {
+                Session["accounter"] = user;
+                return RedirectToAction("ExpenseList", "Expense", new { Area = "Administration" });
+            }
+
+            else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.TechnicalServiceRepresentative)
+            {
+                Session["tech"] = user;
+                return RedirectToAction("IssueList", "Issue", new { Area = "Administration" });
+            }
+
+            else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.MobileSalesRepresentative)
+            {
+                Session["mobileSale"] = user;
+                return RedirectToAction("ProductList", "Product", new { Area = "Administration" });
             }
 
             else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.Member)
@@ -55,6 +91,12 @@ namespace Project.WEBUI.Controllers
 
             ViewBag.KullaniciYok = "Kullanıcı bulunamadı";
             return View();
+        }
+
+        public ActionResult LogOut()
+        {
+            Session["member"] = null;
+            return RedirectToAction("Login", "Login");
         }
 
         private ActionResult AktifKontrol()

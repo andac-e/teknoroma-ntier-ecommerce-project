@@ -48,5 +48,6 @@ namespace Project.WEBUI.Models.ShoppingTools
             return _sepetim.Sum(x => x.Value.Amount);
         }
 
+
     }
 }

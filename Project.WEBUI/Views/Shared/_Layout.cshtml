@@ -19,8 +19,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet" />
+
     <link rel="stylesheet" href="~/OuterTools/css/style.css" />
     <link rel="stylesheet" href="~/OuterTools/css/index.css" />
+
 </head>
 <body>
     <!-- Navbar -->
@@ -48,29 +50,50 @@
                     <li class="nav-item">
                         <a href="@Url.Action("ShoppingList","Shopping")" class="text-secondary nav-link js-scroll-trigger">E-Mağaza</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("CartPage","Shopping")" class="bt bt-md bt-register nav-link cart-btn js-scroll-trigger">Sepetim <span class="badge badge-light">@Session["count"]</span></a>
+                    </li>
 
                     <!-- user login dropdown start-->
                     @if (Session["member"] != null)
                     {
-                        //todo: sepet butonunu düzenle
-                        <li class="nav-item">
-                            <a href="@Url.Action("CartPage","Shopping")" class="bt bt-register nav-link cart-btn js-scroll-trigger">Sepetim<span class="badge badge-light ">@TempData["adet"]</span></a>
-                        </li>
 
-                        <li class="dropdown mx-2">
+                        <div class="dropdown-container mx-2">
+                            <a href="#">
+                                <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
+                                <span class="username p-2">@user.UserName</span>
+                                <i class="fas fa-chevron-down fa-sm text-info"></i>
+                            </a>
+
+                            <nav tabindex="1">
+                                <ul>
+                                    <li>
+                                        <a href="#">Profil</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Siparişlerim</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("LogOut","Login")">Çıkış Yap <i class="fas fa-sign-out-alt"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        @*<li class="dropdown mx-2">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
                                 <span class="username">@user.UserName</span>
                                 <b class="caret"></b>
-                                @*<i class="fas fa-chevron-down"></i>*@
+                                <i class="fas fa-chevron-down fa-sm text-info"></i>
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
                                 <li><a href="#">Profil</a></li>
                                 <li><a href="#">Siparişlerim</a></li>
-                                <li><a href="@Url.Action("LogOut","Login")"><i class="icon-key"></i>Çıkış Yap</a></li>
+                                <li><a href="@Url.Action("LogOut","Login")">Çıkış Yap <i class="fas fa-sign-out-alt"></i></a></li>
                             </ul>
-                        </li>
+                        </li>*@
                     }
                     else
                     {
@@ -145,6 +168,15 @@
                 $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
             });
         });
+
+        $(".dropdown").click(function () {
+            $(this).toggleClass("down");
+        });
+
+        $(".logout").click(function () {
+            $(this).toggleClass("down");
+        });
+
 
     </script>
 

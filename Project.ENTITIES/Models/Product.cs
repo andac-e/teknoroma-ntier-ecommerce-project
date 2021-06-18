@@ -16,6 +16,8 @@ namespace Project.ENTITIES.Models
         public short UnitsInStock { get; set; }
         public string ImagePath { get; set; }
         public int? CategoryID { get; set; }
+        public int? SupplierID { get; set; }
+
 
 
         //Relational Properties

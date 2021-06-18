@@ -21,6 +21,14 @@ namespace Project.WEBUI.Controllers
         ProductRepository _prodRep;
         CategoryRepository _catRep;
 
+        public ShoppingController()
+        {
+            _orderRep = new OrderRepository();
+            _detailRep = new OrderDetailRepository();
+            _prodRep = new ProductRepository();
+            _catRep = new CategoryRepository();
+        }
+
         //Pagination
         public ActionResult ShoppingList(int? page, int? categoryID)
         {
@@ -53,11 +61,9 @@ namespace Project.WEBUI.Controllers
             cart.AddToCart(cartItem);
 
             //Sepetimde kaç ürün var sepete gitmeden badge olarak görmek için
-            TempData["count"] = cart.ProductCount();
-            TempData.Keep("count");
-
+            Session["count"] = cart.ProductCount();
             Session["scart"] = cart;
-            return RedirectToAction("ProductList");
+            return RedirectToAction("ShoppingList");
         }
 
         //Sepet sayfası
@@ -81,6 +87,7 @@ namespace Project.WEBUI.Controllers
             {
                 Cart cart = Session["scart"] as Cart;
                 cart.RemoveFromCart(id);
+                Session["count"] = cart.ProductCount();
                 if (cart.Sepetim.Count == 0)
                 {
                     Session.Remove("scart");
@@ -101,7 +108,7 @@ namespace Project.WEBUI.Controllers
             }
             else
             {
-                TempData["guest"] = "Siparişi onaylamak için üye olmalısınız..";
+                TempData["guest"] = "Siparişi onaylamak için üye olmalısınız.";
                 return RedirectToAction("RegisterNow", "Register");
             }
             return View();
@@ -161,6 +168,7 @@ namespace Project.WEBUI.Controllers
                         OrderDetail od = new OrderDetail();
                         od.OrderID = ovm.Order.ID;
                         od.ProductID = item.ID;
+                        od.UnitPrice = item.Price;
                         od.TotalPrice = item.SubTotal;
                         od.Quantity = item.Amount;
                         _detailRep.Add(od);
@@ -173,6 +181,8 @@ namespace Project.WEBUI.Controllers
 
                     TempData["payment"] = "Siparişiniz bize ulaşmıştır.. Teşekkür ederiz";
                     MailService.Send(ovm.Order.Email, body: $"Siparişiniz başarıyla alındı. Siparişiniz toplam tutarı: {ovm.Order.TotalPrice}");
+                    Session["scart"] = null;
+                    Session["count"] = null;
                     return RedirectToAction("ShoppingList");
                 }
 
@@ -186,5 +196,6 @@ namespace Project.WEBUI.Controllers
 
             #endregion
         }
+
     }
 }

@@ -62,6 +62,7 @@
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\OrderRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\ProductRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\ShipperRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\SupplierRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\TerritoryRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\UserProfileRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\IntRep\IRepository.cs" />

@@ -139,10 +139,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ProductController.cs" />
+    <Compile Include="AuthenticationClasses\AccounterAuthentication.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\EmployeeAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\ManagerAuthentication.cs" />
     <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\MobileSalesAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\SaleAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\TechServiceAuthentication.cs" />
     <Compile Include="AuthenticationClasses\VisitorAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\WareAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -167,6 +176,8 @@
     <Compile Include="VMClasses\TerritoryVM.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Administration\AdminContent\CategoryDTJ.js" />
+    <Content Include="Areas\Administration\AdminContent\ProductDTJ.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -1743,6 +1754,7 @@
     <Content Include="OuterTools\img\mask-square.png" />
     <Content Include="OuterTools\img\mask.png" />
     <Content Include="OuterTools\img\nav-expand.png" />
+    <Content Include="OuterTools\img\no-image.png" />
     <Content Include="OuterTools\img\pro-ac-1.png" />
     <Content Include="OuterTools\img\pro-ac-2.png" />
     <Content Include="OuterTools\img\product-list\pro-1.jpg" />
@@ -2004,6 +2016,14 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Areas\Administration\Views\web.config" />
+    <Content Include="Areas\Administration\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Administration\Views\Category\CategoryList.cshtml" />
+    <Content Include="Areas\Administration\Views\Category\AddCategory.cshtml" />
+    <Content Include="Areas\Administration\Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Areas\Administration\Views\Product\ProductList.cshtml" />
+    <Content Include="Areas\Administration\Views\Product\AddProduct.cshtml" />
+    <Content Include="Areas\Administration\Views\Product\UpdateProduct.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -2034,10 +2054,14 @@
     <Content Include="Views\Register\RegisterOk.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shopping\ShoppingList.cshtml" />
+    <Content Include="Views\Shopping\CartPage.cshtml" />
+    <Content Include="Views\Shopping\ConfirmOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administration\Data\" />
     <Folder Include="OuterTools\assets\jquery-file-upload\server\php\files\thumbnail\" />
+    <Folder Include="Pictures\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
