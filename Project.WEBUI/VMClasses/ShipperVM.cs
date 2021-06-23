@@ -10,6 +10,7 @@ namespace Project.WEBUI.VMClasses
     {
         public Shipper Shipper { get; set; }
         public List<Shipper> Shippers { get; set; }
+        public List<Order> Orders { get; set; }
 
     }
 }

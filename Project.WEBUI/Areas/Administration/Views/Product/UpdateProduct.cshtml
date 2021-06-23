@@ -58,7 +58,7 @@
                             Tedarikçi
                         </label>
                         <div class="col-sm-10">
-                            @Html.DropDownListFor(x => x.Product.CategoryID, new SelectList(Model.Suppliers, "ID", "CompanyName"), "Lütfen tedarikçi seçiniz", new { @class = "form-control" })
+                            @Html.DropDownListFor(x => x.Product.SupplierID, new SelectList(Model.Suppliers, "ID", "CompanyName"), "Lütfen tedarikçi seçiniz", new { @class = "form-control" })
                         </div>
                     </div>
                     <br /><br />
@@ -88,7 +88,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-10">
-                            <button class="btn btn-info">Ürün Güncelle</button>
+                            <button class="btn btn-warning">Ürün Güncelle</button>
                         </div>
                     </div>
                 </div>

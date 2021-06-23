@@ -1,4 +1,4 @@
-﻿
+﻿@model CategoryVM
 @{
     ViewBag.Title = "CategoryList";
     Layout = "~/Areas/Administration/Views/Shared/_AdminLayout.cshtml";
@@ -26,7 +26,7 @@
                         <td class="hidden-phone">@item.Description</td>
                         <td class="center hidden-phone">@item.Status</td>
                         <td class="center hidden-phone">@Html.ActionLink(" ", "DeleteCategory", new { id = item.ID }, new { @class = "btn text-danger fas fa-times" })</td>
-                        <td class="center hidden-phone">@Html.ActionLink(" ", "UpdateCategory", new { id = item.ID }, new { @class = "text-warning fas fa-edit" })</td>
+                        <td class="center hidden-phone">@Html.ActionLink(" ", "UpdateCategory", new { id = item.ID }, new { @class = "btn text-warning fas fa-edit" })</td>
                     </tr>
                 }
 

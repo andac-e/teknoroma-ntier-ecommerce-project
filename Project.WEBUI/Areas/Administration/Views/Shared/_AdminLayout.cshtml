@@ -16,6 +16,7 @@
     <!-- Bootstrap core CSS -->
     <link href="~/OuterTools/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/OuterTools/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
     <!--external css-->
     <link href="~/OuterTools/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <!-- Font Awesome -->
@@ -31,7 +32,6 @@
     <link href="~/OuterTools/css/style.css" rel="stylesheet">
     <link href="~/OuterTools/css/index.css" rel="stylesheet">
     <link href="~/OuterTools/css/style-responsive.css" rel="stylesheet" />
-
     <script src="~/OuterTools/js/jquery.js"></script>
     <script type="text/javascript" language="javascript" src="~/OuterTools/assets/advanced-datatable/media/js/jquery.js"></script>
 
@@ -92,7 +92,29 @@
 
                     <li class="sub-menu">
                         <a href="javascript:;">
-                            <i class="icon-laptop"></i>
+                            <i class="fas fa-user-tie"></i>
+                            <span>Kullanıcılar</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="@Url.Action("AddAppUser","AppUser")">Kullanıcı Ekle</a></li>
+                            <li><a href="@Url.Action("AppUserList","AppUser")">Kullanıcıları Listele</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fas fa-user-astronaut"></i>
+                            <span>Çalışanlar</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="@Url.Action("AddEmployee","Employee")">Çalışan Ekle</a></li>
+                            <li><a href="@Url.Action("EmployeeList","Employee")">Çalışanları Listele</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fas fa-list-ul"></i>
                             <span>Kategoriler</span>
                         </a>
                         <ul class="sub">
@@ -103,12 +125,56 @@
 
                     <li class="sub-menu">
                         <a href="javascript:;">
-                            <i class="icon-book"></i>
+                            <i class="icon-laptop"></i>
                             <span>Ürünler</span>
                         </a>
                         <ul class="sub">
                             <li><a href="@Url.Action("AddProduct","Product")">Ürün Ekle</a></li>
                             <li><a href="@Url.Action("ProductList","Product")">Ürünleri Listele</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fas fa-parachute-box"></i>
+                            <span>Tedarikçiler</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="@Url.Action("AddSupplier","Supplier")">Tedarikçi Ekle</a></li>
+                            <li><a href="@Url.Action("SupplierList","Supplier")">Tedarikçileri Listele</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fas fa-globe-europe"></i>
+                            <span>Bölgeler</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="@Url.Action("AddTerritory","Territory")">Bölge Ekle</a></li>
+                            <li><a href="@Url.Action("TerritoryList","Territory")">Bölgeleri Listele</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fas fa-id-badge"></i>
+                            <span>Çalışan Bölgeleri</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="@Url.Action("AddEmployeeTerritory","EmployeeTerritory")">Çalışan Bölgesi Ekle</a></li>
+                            <li><a href="@Url.Action("EmployeeTerritoryList","EmployeeTerritory")">Çalışan Bölgelerini Listele</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fas fa-lira-sign"></i>
+                            <span>Giderler</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="@Url.Action("AddExpense","Expense")">Gider Ekle</a></li>
+                            <li><a href="@Url.Action("ExpenseList","Expense")">Giderleri Listele</a></li>
                         </ul>
                     </li>
 
@@ -147,7 +213,7 @@
     <script src="~/OuterTools/js/owl.carousel.js"></script>
     <script src="~/OuterTools/js/jquery.customSelect.min.js"></script>
     <script src="~/OuterTools/js/respond.min.js"></script>
-
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
     <script class="include" type="text/javascript" src="~/OuterTools/js/jquery.dcjqaccordion.2.7.js"></script>
 
     <!--common script for all pages-->
@@ -159,6 +225,7 @@
     <script src="~/OuterTools/js/count.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
 
     <script>
 
@@ -180,6 +247,14 @@
         $(function () {
             $('select.styled').customSelect();
         });
+
+        //Tarih seçici
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                format: 'dd/mm/yyyy'
+            });
+        })
+
 
     </script>
 

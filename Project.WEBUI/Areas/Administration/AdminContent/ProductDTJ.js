@@ -3,6 +3,7 @@
     var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
     sOut += '<tr><td>Ürün Detay:</td><td> <a title="İçerik" href="/Administration/Product/ProductDetail/' + aData[1] + '">' + aData[2] + ' </a> </td></tr>';
     sOut += '<tr><td>Ürün Resmi:</td><td>' + aData[7] + '</td></tr>';
+    sOut += '<tr><td>Ürün Ekleme:</td><td> <a href="/Administration/Product/AddProduct" class="btn btn-info"> Ürün Ekle<a/> </td></tr>';
     sOut += '</table>';
 
     return sOut;

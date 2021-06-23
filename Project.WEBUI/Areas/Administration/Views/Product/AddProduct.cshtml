@@ -57,7 +57,7 @@
                             Tedarikçi
                         </label>
                         <div class="col-sm-10">
-                            @Html.DropDownListFor(x => x.Product.CategoryID, new SelectList(Model.Suppliers, "ID", "CompanyName"), "Lütfen tedarikçi seçiniz", new { @class = "form-control" })
+                            @Html.DropDownListFor(x => x.Product.SupplierID, new SelectList(Model.Suppliers, "ID", "CompanyName"), "Lütfen tedarikçi seçiniz", new { @class = "form-control" })
                         </div>
                     </div>
                     <br /><br />

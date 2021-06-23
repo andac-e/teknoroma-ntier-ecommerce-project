@@ -1,6 +1,7 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.COMMON.Tools;
 using Project.ENTITIES.Models;
+using Project.WEBUI.AuthenticationClasses;
 using Project.WEBUI.VMClasses;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
+    //[AdminAuthentication, ManagerAuthentication]
     public class ProductController : Controller
     {
 
