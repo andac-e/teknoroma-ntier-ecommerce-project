@@ -10,11 +10,11 @@ namespace Project.WEBUI.AuthenticationClasses
     {
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
-            if (httpContext.Session["accounter"] != null)
+            if (httpContext.Session["accounter"] != null || httpContext.Session["manager"] != null)
             {
                 return true;
             }
-            httpContext.Response.Redirect("/Home/Login");
+            httpContext.Response.Redirect("/Shopping/ShoppingList");
             return false;
         }
     }

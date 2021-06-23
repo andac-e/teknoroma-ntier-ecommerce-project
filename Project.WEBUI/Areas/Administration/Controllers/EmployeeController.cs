@@ -10,7 +10,8 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
-    //[AdminAuthentication, ManagerAuthentication]
+    
+    [ManagerAuthentication]
     public class EmployeeController : Controller
     {
         // GET: Administration/Employee

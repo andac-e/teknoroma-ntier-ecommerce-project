@@ -145,6 +145,8 @@
     <Compile Include="Areas\Administration\Controllers\EmployeeController.cs" />
     <Compile Include="Areas\Administration\Controllers\EmployeeTerritoryController.cs" />
     <Compile Include="Areas\Administration\Controllers\ExpenseController.cs" />
+    <Compile Include="Areas\Administration\Controllers\IssueController.cs" />
+    <Compile Include="Areas\Administration\Controllers\OrderController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductController.cs" />
     <Compile Include="Areas\Administration\Controllers\SupplierController.cs" />
     <Compile Include="Areas\Administration\Controllers\TerritoryController.cs" />
@@ -188,6 +190,8 @@
     <Content Include="Areas\Administration\AdminContent\EmployeeDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\ETDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\ExpenseDTJ.js" />
+    <Content Include="Areas\Administration\AdminContent\IssueDTJ.js" />
+    <Content Include="Areas\Administration\AdminContent\OrderDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\ProductDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\SupplierDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\TerritoryDTJ.js" />
@@ -2110,6 +2114,10 @@
     <Content Include="Content\bootstrap-datepicker.standalone.css.map" />
     <Content Include="Content\bootstrap-datepicker.css.map" />
     <Content Include="Areas\Administration\Views\Expense\UpdateExpense.cshtml" />
+    <Content Include="Areas\Administration\Views\Issue\IssueList.cshtml" />
+    <Content Include="Areas\Administration\Views\Issue\AddIssue.cshtml" />
+    <Content Include="Areas\Administration\Views\Issue\UpdateIssue.cshtml" />
+    <Content Include="Areas\Administration\Views\Order\OrderList.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

@@ -1,5 +1,11 @@
 ﻿@{
-    AppUser user = (AppUser)HttpContext.Current.Session["admin"];
+    AppUser admin = (AppUser)HttpContext.Current.Session["admin"];
+    AppUser manager = (AppUser)HttpContext.Current.Session["manager"];
+    AppUser sale = (AppUser)HttpContext.Current.Session["sale"];
+    AppUser ware = (AppUser)HttpContext.Current.Session["ware"];
+    AppUser accounter = (AppUser)HttpContext.Current.Session["accounter"];
+    AppUser tech = (AppUser)HttpContext.Current.Session["tech"];
+    AppUser mobileSale = (AppUser)HttpContext.Current.Session["mobileSale"];
 }
 
 <!DOCTYPE html>
@@ -57,16 +63,40 @@
             <div class="top-nav">
                 <!--search & user info start-->
                 <ul class="nav pull-right top-menu">
-                    <li>
-                        <input type="text" class="form-control search" placeholder="Search">
-                    </li>
                     <!-- user login dropdown start-->
 
-                    <div class="dropdown-container mx-2">
+                    <div class="dropdown-container">
                         <a href="#">
-                            <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
-                            <span class="username p-2">Admin@*@user.UserName*@</span>
-                            <i class="fas fa-chevron-down fa-sm text-info"></i>
+                            <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%;margin-right:5px">
+                            @if (Session["admin"] != null)
+                            {
+                                <span class="username"> @admin.UserName</span>
+                            }
+                            else if (Session["manager"] != null)
+                            {
+                                <span class="username"> @manager.UserName</span>
+                            }
+                            else if (Session["sale"] != null)
+                            {
+                                <span class="username"> @sale.UserName</span>
+                            }
+                            else if (Session["ware"] != null)
+                            {
+                                <span class="username"> @ware.UserName</span>
+                            }
+                            else if (Session["accounter"] != null)
+                            {
+                                <span class="username"> @accounter.UserName</span>
+                            }
+                            else if (Session["tech"] != null)
+                            {
+                                <span class="username"> @tech.UserName</span>
+                            }
+                            else if (Session["mobileSale"] != null)
+                            {
+                                <span class="username"> @mobileSale.UserName</span>
+                            }
+                            <i class="fas fa-chevron-down fa-sm text-info" style="margin-left:5px"></i>
                         </a>
 
                         <nav tabindex="1">
@@ -90,94 +120,152 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fas fa-user-tie"></i>
-                            <span>Kullanıcılar</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddAppUser","AppUser")">Kullanıcı Ekle</a></li>
-                            <li><a href="@Url.Action("AppUserList","AppUser")">Kullanıcıları Listele</a></li>
-                        </ul>
-                    </li>
+                    @if (Session["admin"] != null)
+                    {
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Kullanıcılar</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddAppUser","AppUser")">Kullanıcı Ekle</a></li>
+                                <li><a href="@Url.Action("AppUserList","AppUser")">Kullanıcıları Listele</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fas fa-user-astronaut"></i>
-                            <span>Çalışanlar</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddEmployee","Employee")">Çalışan Ekle</a></li>
-                            <li><a href="@Url.Action("EmployeeList","Employee")">Çalışanları Listele</a></li>
-                        </ul>
-                    </li>
+                    }
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fas fa-list-ul"></i>
-                            <span>Kategoriler</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddCategory","Category")">Kategori Ekle</a></li>
-                            <li><a href="@Url.Action("CategoryList","Category")">Kategorileri Listele</a></li>
-                        </ul>
-                    </li>
+                    else if (Session["manager"] != null)
+                    {
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="icon-laptop"></i>
-                            <span>Ürünler</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddProduct","Product")">Ürün Ekle</a></li>
-                            <li><a href="@Url.Action("ProductList","Product")">Ürünleri Listele</a></li>
-                        </ul>
-                    </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-dolly"></i>
+                                <span>Siparişler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("OrderList","Order")">Siparişleri Listele</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fas fa-parachute-box"></i>
-                            <span>Tedarikçiler</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddSupplier","Supplier")">Tedarikçi Ekle</a></li>
-                            <li><a href="@Url.Action("SupplierList","Supplier")">Tedarikçileri Listele</a></li>
-                        </ul>
-                    </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-user-astronaut"></i>
+                                <span>Çalışanlar</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddEmployee","Employee")">Çalışan Ekle</a></li>
+                                <li><a href="@Url.Action("EmployeeList","Employee")">Çalışanları Listele</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fas fa-globe-europe"></i>
-                            <span>Bölgeler</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddTerritory","Territory")">Bölge Ekle</a></li>
-                            <li><a href="@Url.Action("TerritoryList","Territory")">Bölgeleri Listele</a></li>
-                        </ul>
-                    </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-list-ul"></i>
+                                <span>Kategoriler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddCategory","Category")">Kategori Ekle</a></li>
+                                <li><a href="@Url.Action("CategoryList","Category")">Kategorileri Listele</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fas fa-id-badge"></i>
-                            <span>Çalışan Bölgeleri</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddEmployeeTerritory","EmployeeTerritory")">Çalışan Bölgesi Ekle</a></li>
-                            <li><a href="@Url.Action("EmployeeTerritoryList","EmployeeTerritory")">Çalışan Bölgelerini Listele</a></li>
-                        </ul>
-                    </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="icon-laptop"></i>
+                                <span>Ürünler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddProduct","Product")">Ürün Ekle</a></li>
+                                <li><a href="@Url.Action("ProductList","Product")">Ürünleri Listele</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fas fa-lira-sign"></i>
-                            <span>Giderler</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="@Url.Action("AddExpense","Expense")">Gider Ekle</a></li>
-                            <li><a href="@Url.Action("ExpenseList","Expense")">Giderleri Listele</a></li>
-                        </ul>
-                    </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-lira-sign"></i>
+                                <span>Giderler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddExpense","Expense")">Gider Ekle</a></li>
+                                <li><a href="@Url.Action("ExpenseList","Expense")">Giderleri Listele</a></li>
+                            </ul>
+                        </li>
 
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-globe-europe"></i>
+                                <span>Bölgeler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddTerritory","Territory")">Bölge Ekle</a></li>
+                                <li><a href="@Url.Action("TerritoryList","Territory")">Bölgeleri Listele</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-id-badge"></i>
+                                <span>Çalışan Bölgeleri</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddEmployeeTerritory","EmployeeTerritory")">Çalışan Bölgesi Ekle</a></li>
+                                <li><a href="@Url.Action("EmployeeTerritoryList","EmployeeTerritory")">Çalışan Bölgelerini Listele</a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    else if (Session["tech"] != null)
+                    {
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Teknik Arızalar</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddIssue","Issue")">Arıza Ekle</a></li>
+                                <li><a href="@Url.Action("IssueList","Issue")">Arızaları Listele</a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    else if (Session["ware"] != null)
+                    {
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="icon-laptop"></i>
+                                <span>Ürünler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddProduct","Product")">Ürün Ekle</a></li>
+                                <li><a href="@Url.Action("ProductList","Product")">Ürünleri Listele</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-parachute-box"></i>
+                                <span>Tedarikçiler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddSupplier","Supplier")">Tedarikçi Ekle</a></li>
+                                <li><a href="@Url.Action("SupplierList","Supplier")">Tedarikçileri Listele</a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    else if (Session["accounter"] != null)
+                    {
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-lira-sign"></i>
+                                <span>Giderler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddExpense","Expense")">Gider Ekle</a></li>
+                                <li><a href="@Url.Action("ExpenseList","Expense")">Giderleri Listele</a></li>
+                            </ul>
+                        </li>
+                    }
 
 
                 </ul>

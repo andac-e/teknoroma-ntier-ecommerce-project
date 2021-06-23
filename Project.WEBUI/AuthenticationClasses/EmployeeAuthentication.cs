@@ -19,7 +19,7 @@ namespace Project.WEBUI.AuthenticationClasses
             {
                 return true;
             }
-            httpContext.Response.Redirect("/Home/Login");
+            httpContext.Response.Redirect("/Shopping/ShoppingList");
             return false;
 
         }

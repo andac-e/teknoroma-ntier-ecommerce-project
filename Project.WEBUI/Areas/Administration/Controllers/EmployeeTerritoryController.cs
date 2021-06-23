@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
-    //[AdminAuthentication, ManagerAuthentication]
+    [ManagerAuthentication]
     public class EmployeeTerritoryController : Controller
     {
         EmployeeRepository _eRep;

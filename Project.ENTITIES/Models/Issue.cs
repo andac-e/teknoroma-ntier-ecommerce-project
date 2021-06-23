@@ -12,11 +12,13 @@ namespace Project.ENTITIES.Models
         public Issue()
         {
             IssueStatus = IssueStatus.Open;
+            OpenDate = DateTime.Now;
         }
 
         public string Subject { get; set; }
         public string Answer { get; set; }
         public IssueStatus IssueStatus { get; set; }
+        public DateTime OpenDate { get; set; }
         public int? AppUserID { get; set; }
 
         //Relational Properties

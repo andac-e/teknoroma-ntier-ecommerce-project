@@ -10,5 +10,6 @@ namespace Project.WEBUI.VMClasses
     {
         public Issue Issue { get; set; }
         public List<Issue> Issues { get; set; }
+        public List<AppUser> AppUsers { get; set; }
     }
 }

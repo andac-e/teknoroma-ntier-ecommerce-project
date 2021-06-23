@@ -40,7 +40,7 @@ namespace Project.WEBUI.Controllers
             if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.Admin)
             {
                 Session["admin"] = user;
-                return RedirectToAction("UserList", "AppUser", new { Area = "Administration" });
+                return RedirectToAction("AppUserList", "AppUser", new { Area = "Administration" });
             }
 
             else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.BranchManager)
@@ -95,7 +95,7 @@ namespace Project.WEBUI.Controllers
 
         public ActionResult LogOut()
         {
-            Session["member"] = null;
+            Session.Clear();
             return RedirectToAction("Login", "Login");
         }
 

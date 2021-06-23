@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
-    //[AdminAuthentication]
+    [AdminAuthentication]
     public class AppUserController : Controller
     {
         // GET: Administration/AppUser

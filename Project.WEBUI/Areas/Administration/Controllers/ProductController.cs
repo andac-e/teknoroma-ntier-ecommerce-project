@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
-    //[AdminAuthentication, ManagerAuthentication]
+    [ManagerAuthentication, WareAuthentication]
     public class ProductController : Controller
     {
 

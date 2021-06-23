@@ -10,7 +10,8 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
-    //[AdminAuthentication, AccounterAuthentication]
+    [AccounterAuthentication]
+    [ManagerAuthentication]
     public class ExpenseController : Controller
     {
         

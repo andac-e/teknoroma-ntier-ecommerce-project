@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
-    //[AdminAuthentication, ManagerAuthentication, WareAuthentication]
+    [WareAuthentication]
     public class SupplierController : Controller
     {
         // GET: Administration/Supplier
