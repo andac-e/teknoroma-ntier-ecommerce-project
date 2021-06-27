@@ -146,6 +146,7 @@
     <Compile Include="Areas\Administration\Controllers\EmployeeTerritoryController.cs" />
     <Compile Include="Areas\Administration\Controllers\ExpenseController.cs" />
     <Compile Include="Areas\Administration\Controllers\IssueController.cs" />
+    <Compile Include="Areas\Administration\Controllers\MessageController.cs" />
     <Compile Include="Areas\Administration\Controllers\OrderController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductController.cs" />
     <Compile Include="Areas\Administration\Controllers\SupplierController.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="AuthenticationClasses\TechServiceAuthentication.cs" />
     <Compile Include="AuthenticationClasses\VisitorAuthentication.cs" />
     <Compile Include="AuthenticationClasses\WareAuthentication.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -177,6 +179,7 @@
     <Compile Include="VMClasses\EmployeeVM.cs" />
     <Compile Include="VMClasses\ExpenseVM.cs" />
     <Compile Include="VMClasses\IssueVM.cs" />
+    <Compile Include="VMClasses\MessageVM.cs" />
     <Compile Include="VMClasses\OrderVM.cs" />
     <Compile Include="VMClasses\PaginationVM.cs" />
     <Compile Include="VMClasses\ProductVM.cs" />
@@ -191,6 +194,7 @@
     <Content Include="Areas\Administration\AdminContent\ETDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\ExpenseDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\IssueDTJ.js" />
+    <Content Include="Areas\Administration\AdminContent\MessageDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\OrderDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\ProductDTJ.js" />
     <Content Include="Areas\Administration\AdminContent\SupplierDTJ.js" />
@@ -1772,6 +1776,9 @@
     <Content Include="OuterTools\img\checkbox\radio-off.png" />
     <Content Include="OuterTools\img\checkbox\radio-on.png" />
     <Content Include="OuterTools\img\customSelect-arrow.gif" />
+    <Content Include="OuterTools\img\default-profile-2.jpg" />
+    <Content Include="OuterTools\img\default-profile-3.jpg" />
+    <Content Include="OuterTools\img\default-profile.jpg" />
     <Content Include="OuterTools\img\file-search\ai.png" />
     <Content Include="OuterTools\img\file-search\doc.png" />
     <Content Include="OuterTools\img\file-search\email.png" />
@@ -2118,6 +2125,9 @@
     <Content Include="Areas\Administration\Views\Issue\AddIssue.cshtml" />
     <Content Include="Areas\Administration\Views\Issue\UpdateIssue.cshtml" />
     <Content Include="Areas\Administration\Views\Order\OrderList.cshtml" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Administration\Views\Message\MessageList.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -2234,6 +2244,9 @@
     <Content Include="Views\Shopping\ShoppingList.cshtml" />
     <Content Include="Views\Shopping\CartPage.cshtml" />
     <Content Include="Views\Shopping\ConfirmOrder.cshtml" />
+    <Content Include="Views\Shopping\OrderList.cshtml" />
+    <Content Include="Views\Contact\AddTechnicalIssue.cshtml" />
+    <Content Include="Views\Contact\AddMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

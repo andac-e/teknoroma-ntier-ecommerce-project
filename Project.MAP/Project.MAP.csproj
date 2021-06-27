@@ -58,6 +58,7 @@
     <Compile Include="Options\EmployeeTerritoryMap.cs" />
     <Compile Include="Options\ExpenseMap.cs" />
     <Compile Include="Options\IssueMap.cs" />
+    <Compile Include="Options\MessageMap.cs" />
     <Compile Include="Options\OrderDetailMap.cs" />
     <Compile Include="Options\OrderMap.cs" />
     <Compile Include="Options\ProductMap.cs" />

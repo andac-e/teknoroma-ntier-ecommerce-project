@@ -32,7 +32,7 @@ namespace Project.ENTITIES.Models
         public string ConfirmPassword { get; set; }
         [Required(ErrorMessage = "{0} alanı boş geçilemez")]
         [Display(Name = "Email")]
-        [RegularExpressionAttribute(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Girdiğiniz Email standart formatlara uymamaktadır.")]
+        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Girdiğiniz Email standart formatlara uymamaktadır.")]
         public string Email { get; set; }
         public UserRole Role { get; set; }
         public Guid ActivationCode { get; set; }

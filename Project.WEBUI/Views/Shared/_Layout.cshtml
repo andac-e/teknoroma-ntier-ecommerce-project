@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - TEKNOROMA</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap  -->
@@ -60,7 +60,7 @@
 
                         <div class="dropdown-container mx-2">
                             <a href="#">
-                                <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
+                                <img alt="" src="~/OuterTools/img/default-profile-3.jpg" width="32" style="border-radius:50%">
                                 <span class="username p-2">@user.UserName</span>
                                 <i class="fas fa-chevron-down fa-sm text-info"></i>
                             </a>
@@ -68,10 +68,7 @@
                             <nav tabindex="1">
                                 <ul>
                                     <li>
-                                        <a href="#">Profil</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Siparişlerim</a>
+                                        <a href="@Url.Action("OrderList","Shopping")">Siparişlerim</a>
                                     </li>
                                     <li>
                                         <a href="@Url.Action("LogOut","Login")">Çıkış Yap <i class="fas fa-sign-out-alt"></i></a>

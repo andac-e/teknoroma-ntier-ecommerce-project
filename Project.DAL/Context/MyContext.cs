@@ -28,6 +28,7 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new IssueMap());
             modelBuilder.Configurations.Add(new OrderMap());
             modelBuilder.Configurations.Add(new OrderDetailMap());
+            modelBuilder.Configurations.Add(new MessageMap());
             modelBuilder.Configurations.Add(new ProductMap());
             modelBuilder.Configurations.Add(new ShipperMap());
             modelBuilder.Configurations.Add(new SupplierMap());
@@ -43,6 +44,7 @@ namespace Project.DAL.Context
         public DbSet<Issue> Issues { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Message> Messages { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Shipper> Shippers { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }

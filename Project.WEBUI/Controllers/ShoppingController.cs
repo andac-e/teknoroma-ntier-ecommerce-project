@@ -11,6 +11,7 @@ using Project.ENTITIES.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Project.COMMON.Tools;
+using Project.WEBUI.AuthenticationClasses;
 
 namespace Project.WEBUI.Controllers
 {
@@ -197,5 +198,10 @@ namespace Project.WEBUI.Controllers
             #endregion
         }
 
+        [MemberAuthentication]
+        public ActionResult OrderList()
+        {
+            return View();
+        }
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\EmployeeTerritoryRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\ExpenseRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\IssueRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\MessageRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\OrderDetailRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\OrderRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\ProductRepository.cs" />

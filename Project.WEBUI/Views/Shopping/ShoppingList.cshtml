@@ -19,7 +19,7 @@
                     <ul>
                         @foreach (Category item in Model.Categories)
                         {
-                            <li class="my-1">@Html.ActionLink(item.CategoryName, "ShoppingList", new { categoryID = item.ID }, new { @class = "" })</li>
+                            <li class="my-1">@Html.ActionLink(item.CategoryName, "ShoppingList", new { categoryID = item.ID }, new { @class = "text-danger" })</li>
                         }
                     </ul>
                 </div>

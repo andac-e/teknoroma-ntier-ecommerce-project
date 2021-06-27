@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "İletişim";
 }
 
 <section class="contact">
@@ -20,7 +20,7 @@
                     </div>
                     <h4>Teknik</h4>
                     <p>Herhangi bir sorun veya teknik destek vermek için buradayız.</p>
-                    <a href="#" class="btn card-btn support">
+                    <a href="@Url.Action("AddTechnicalIssue","Contact")" class="btn card-btn support">
                         <span class="arrow-icon">➝</span>
                         <span class="text">Destek Al</span>
                     </a>
@@ -33,7 +33,7 @@
                     </div>
                     <h4>Satış</h4>
                     <p>Birlikte nasıl çalışabileceğimiz hakkında konuşmak isteriz.</p>
-                    <a href="#" class="btn card-btn sales">
+                    <a href="@Url.Action("AddMessage","Contact")" class="btn card-btn sales">
                         <span class="arrow-icon">➝</span>
                         <span class="text">Satıcı Ol</span>
                     </a>
@@ -46,7 +46,7 @@
                     </div>
                     <h4>İş Ortaklığı</h4>
                     <p>İş ortağı ekosistemimize katılın ve Teknoroma ile işinizi hızlandırın.</p>
-                    <a href="#" class="btn card-btn partner">
+                    <a href="@Url.Action("AddMessage","Contact")" class="btn card-btn partner">
                         <span class="arrow-icon">➝</span>
                         <span class="text">Partnerlik</span>
                     </a>
@@ -59,7 +59,7 @@
                     </div>
                     <h4>Öneri</h4>
                     <p>Almış olduğunuz hizmetle ilgili önerilerinizi duymak istiyoruz.</p>
-                    <a href="#" class="btn card-btn advice">
+                    <a href="@Url.Action("AddMessage","Contact")" class="btn card-btn advice">
                         <span class="arrow-icon">➝</span>
                         <span class="text">Görüş Bildir</span>
                     </a>

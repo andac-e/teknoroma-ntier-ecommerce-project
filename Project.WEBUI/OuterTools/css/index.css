@@ -1243,3 +1243,7 @@ main {
     gap: 32px;
   }
 } */
+
+.order-list {
+    min-height: calc(100vh - 64px);
+}

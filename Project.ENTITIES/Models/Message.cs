@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public class Issue : BaseEntity
+    public class Message : BaseEntity
     {
-        public Issue()
+        public Message()
         {
-            IssueStatus = IssueStatus.Open;
-            OpenDate = DateTime.Now;
+            MessageDate = DateTime.Now;
         }
 
         [Required(ErrorMessage = "{0} alanı boş geçilemez")]
@@ -21,17 +20,14 @@ namespace Project.ENTITIES.Models
         public string Subject { get; set; }
         [Required(ErrorMessage = "{0} alanı boş geçilemez")]
         [Display(Name = "Mesaj")]
-        public string Answer { get; set; }
-        public IssueStatus IssueStatus { get; set; }
-        public DateTime OpenDate { get; set; }
+        public string Description { get; set; }
         [Required(ErrorMessage = "{0} alanı boş geçilemez")]
         [Display(Name = "Email")]
         [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Girdiğiniz Email standart formatlara uymamaktadır.")]
         public string Email { get; set; }
-        public int? AppUserID { get; set; }
-
-        //Relational Properties
-        public virtual AppUser AppUser { get; set; }
+        public DateTime MessageDate { get; set; }
+        [Range(1, int.MaxValue, ErrorMessage = "Yardım alacağınız konuyu seçiniz")]
+        public MessageType MessageType { get; set; }
 
     }
 }

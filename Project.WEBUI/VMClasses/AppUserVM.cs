@@ -10,6 +10,7 @@ namespace Project.WEBUI.VMClasses
     {
         public AppUser AppUser { get; set; }
         public List<AppUser> AppUsers { get; set; }
+        public List<Order> Orders { get; set; }
         public UserProfile Profile { get; set; }
         public List<UserProfile> UserProfiles { get; set; }
 

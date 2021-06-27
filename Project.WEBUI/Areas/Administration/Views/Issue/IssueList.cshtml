@@ -27,7 +27,14 @@
                         <td>@item.ID</td>
                         <td>@item.Subject</td>
                         <td>@item.Answer</td>
-                        <td>@item.AppUser.UserName</td>
+                        @if (item.AppUser != null)
+                        {
+                            <td>@item.AppUser.UserName</td>
+                        }
+                        else
+                        {
+                            <td>@item.Email</td>
+                        }
                         <td>@item.OpenDate</td>
                         <td>@item.IssueStatus</td>
                         <td class="center hidden-phone">@item.Status</td>
