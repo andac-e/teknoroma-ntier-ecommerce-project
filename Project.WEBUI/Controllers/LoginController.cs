@@ -52,7 +52,7 @@ namespace Project.WEBUI.Controllers
             else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.SalesRepresentative)
             {
                 Session["sale"] = user;
-                return RedirectToAction("OrderList", "Order", new { Area = "Administration" });
+                return RedirectToAction("ProductList", "Product", new { Area = "Administration" });
             }
 
             else if (appUser.Password == decrypted && user.Role == ENTITIES.Enums.UserRole.WarehouseRepresentative)

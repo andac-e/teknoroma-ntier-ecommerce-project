@@ -10,7 +10,7 @@ namespace Project.WEBUI.AuthenticationClasses
     {
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
-            if (httpContext.Session["ware"] != null || httpContext.Session["manager"] != null)
+            if (httpContext.Session["ware"] != null || httpContext.Session["manager"] != null || httpContext.Session["sale"] != null)
             {
                 return true;
             }

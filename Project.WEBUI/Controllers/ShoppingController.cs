@@ -126,7 +126,7 @@ namespace Project.WEBUI.Controllers
 
             #region APISection
 
-            using(HttpClient client = new HttpClient())
+            using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://localhost:44344/api/");
 
@@ -180,8 +180,8 @@ namespace Project.WEBUI.Controllers
                         _prodRep.Update(decreaseStock);
                     }
 
-                    TempData["payment"] = "Siparişiniz bize ulaşmıştır.. Teşekkür ederiz";
-                    MailService.Send(ovm.Order.Email, body: $"Siparişiniz başarıyla alındı. Siparişiniz toplam tutarı: {ovm.Order.TotalPrice}");
+                    TempData["payment"] = "Siparişiniz bize ulaşmıştır. Teşekkür ederiz.";
+                    MailService.Send(ovm.Order.Email, body: $"Siparişiniz başarıyla alındı. Siparişiniz toplam tutarı: ${ovm.Order.TotalPrice}", subject: "Siparişiniz Başarılı");
                     Session["scart"] = null;
                     Session["count"] = null;
                     return RedirectToAction("ShoppingList");

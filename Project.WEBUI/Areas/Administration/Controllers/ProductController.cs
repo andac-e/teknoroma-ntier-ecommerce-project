@@ -2,6 +2,7 @@
 using Project.COMMON.Tools;
 using Project.ENTITIES.Models;
 using Project.WEBUI.AuthenticationClasses;
+using Project.WEBUI.Models.Helpers;
 using Project.WEBUI.VMClasses;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Administration.Controllers
 {
-    [ManagerAuthentication, WareAuthentication]
+    [ManagerAuthentication, WareAuthentication, SaleAuthentication]
     public class ProductController : Controller
     {
 
@@ -42,6 +43,12 @@ namespace Project.WEBUI.Areas.Administration.Controllers
             {
                 Products = id == null ? _pRep.GetActives() : _pRep.Where(x => x.CategoryID == id)
             };
+
+            Currency c = new Currency();
+            ViewBag.EuroSell = c.EuroSell;
+            ViewBag.EuroBuy = c.EuroBuy;
+            ViewBag.DolarSell = c.DolarSell;
+            ViewBag.DolarBuy = c.DolarBuy;
             return View(pvm);
         }
 

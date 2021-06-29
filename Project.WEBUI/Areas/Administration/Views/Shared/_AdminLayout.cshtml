@@ -128,8 +128,8 @@
                                 <span>Kullanıcılar</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddAppUser","AppUser")">Kullanıcı Ekle</a></li>
-                                <li><a href="@Url.Action("AppUserList","AppUser")">Kullanıcıları Listele</a></li>
+                                <li><a href="@Url.Action("AddAppUser", "AppUser")">Kullanıcı Ekle</a></li>
+                                <li><a href="@Url.Action("AppUserList", "AppUser")">Kullanıcıları Listele</a></li>
                             </ul>
                         </li>
 
@@ -144,7 +144,17 @@
                                 <span>Siparişler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("OrderList","Order")">Siparişleri Listele</a></li>
+                                <li><a href="@Url.Action("OrderList", "Order")">Siparişleri Listele</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-inbox"></i>
+                                <span>Mesajlar</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("MessageList", "Message")">Mesajları Listele</a></li>
                             </ul>
                         </li>
 
@@ -154,8 +164,8 @@
                                 <span>Çalışanlar</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddEmployee","Employee")">Çalışan Ekle</a></li>
-                                <li><a href="@Url.Action("EmployeeList","Employee")">Çalışanları Listele</a></li>
+                                <li><a href="@Url.Action("AddEmployee", "Employee")">Çalışan Ekle</a></li>
+                                <li><a href="@Url.Action("EmployeeList", "Employee")">Çalışanları Listele</a></li>
                             </ul>
                         </li>
 
@@ -165,8 +175,8 @@
                                 <span>Kategoriler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddCategory","Category")">Kategori Ekle</a></li>
-                                <li><a href="@Url.Action("CategoryList","Category")">Kategorileri Listele</a></li>
+                                <li><a href="@Url.Action("AddCategory", "Category")">Kategori Ekle</a></li>
+                                <li><a href="@Url.Action("CategoryList", "Category")">Kategorileri Listele</a></li>
                             </ul>
                         </li>
 
@@ -176,8 +186,8 @@
                                 <span>Ürünler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddProduct","Product")">Ürün Ekle</a></li>
-                                <li><a href="@Url.Action("ProductList","Product")">Ürünleri Listele</a></li>
+                                <li><a href="@Url.Action("AddProduct", "Product")">Ürün Ekle</a></li>
+                                <li><a href="@Url.Action("ProductList", "Product")">Ürünleri Listele</a></li>
                             </ul>
                         </li>
 
@@ -187,8 +197,8 @@
                                 <span>Giderler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddExpense","Expense")">Gider Ekle</a></li>
-                                <li><a href="@Url.Action("ExpenseList","Expense")">Giderleri Listele</a></li>
+                                <li><a href="@Url.Action("AddExpense", "Expense")">Gider Ekle</a></li>
+                                <li><a href="@Url.Action("ExpenseList", "Expense")">Giderleri Listele</a></li>
                             </ul>
                         </li>
 
@@ -198,8 +208,8 @@
                                 <span>Bölgeler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddTerritory","Territory")">Bölge Ekle</a></li>
-                                <li><a href="@Url.Action("TerritoryList","Territory")">Bölgeleri Listele</a></li>
+                                <li><a href="@Url.Action("AddTerritory", "Territory")">Bölge Ekle</a></li>
+                                <li><a href="@Url.Action("TerritoryList", "Territory")">Bölgeleri Listele</a></li>
                             </ul>
                         </li>
                         <li class="sub-menu">
@@ -208,8 +218,8 @@
                                 <span>Çalışan Bölgeleri</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddEmployeeTerritory","EmployeeTerritory")">Çalışan Bölgesi Ekle</a></li>
-                                <li><a href="@Url.Action("EmployeeTerritoryList","EmployeeTerritory")">Çalışan Bölgelerini Listele</a></li>
+                                <li><a href="@Url.Action("AddEmployeeTerritory", "EmployeeTerritory")">Çalışan Bölgesi Ekle</a></li>
+                                <li><a href="@Url.Action("EmployeeTerritoryList", "EmployeeTerritory")">Çalışan Bölgelerini Listele</a></li>
                             </ul>
                         </li>
                     }
@@ -222,8 +232,8 @@
                                 <span>Teknik Arızalar</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddIssue","Issue")">Arıza Ekle</a></li>
-                                <li><a href="@Url.Action("IssueList","Issue")">Arızaları Listele</a></li>
+                                <li><a href="@Url.Action("AddIssue", "Issue")">Arıza Ekle</a></li>
+                                <li><a href="@Url.Action("IssueList", "Issue")">Arızaları Listele</a></li>
                             </ul>
                         </li>
                     }
@@ -236,8 +246,8 @@
                                 <span>Ürünler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddProduct","Product")">Ürün Ekle</a></li>
-                                <li><a href="@Url.Action("ProductList","Product")">Ürünleri Listele</a></li>
+                                <li><a href="@Url.Action("AddProduct", "Product")">Ürün Ekle</a></li>
+                                <li><a href="@Url.Action("ProductList", "Product")">Ürünleri Listele</a></li>
                             </ul>
                         </li>
 
@@ -247,8 +257,8 @@
                                 <span>Tedarikçiler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddSupplier","Supplier")">Tedarikçi Ekle</a></li>
-                                <li><a href="@Url.Action("SupplierList","Supplier")">Tedarikçileri Listele</a></li>
+                                <li><a href="@Url.Action("AddSupplier", "Supplier")">Tedarikçi Ekle</a></li>
+                                <li><a href="@Url.Action("SupplierList", "Supplier")">Tedarikçileri Listele</a></li>
                             </ul>
                         </li>
                     }
@@ -261,8 +271,32 @@
                                 <span>Giderler</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="@Url.Action("AddExpense","Expense")">Gider Ekle</a></li>
-                                <li><a href="@Url.Action("ExpenseList","Expense")">Giderleri Listele</a></li>
+                                <li><a href="@Url.Action("AddExpense", "Expense")">Gider Ekle</a></li>
+                                <li><a href="@Url.Action("ExpenseList", "Expense")">Giderleri Listele</a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    else if (Session["sale"] != null)
+                    {
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="icon-laptop"></i>
+                                <span>Ürünler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("AddProduct", "Product")">Ürün Ekle</a></li>
+                                <li><a href="@Url.Action("ProductList", "Product")">Ürünleri Listele</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-dolly"></i>
+                                <span>Siparişler</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("OrderList", "Order")">Siparişleri Listele</a></li>
                             </ul>
                         </li>
                     }
