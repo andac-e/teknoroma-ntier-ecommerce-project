@@ -1,4 +1,4 @@
-## [](https://drive.google.com/file/d/1hsQ8lp27LQPETSzDJa1_2iAF-KYMSE-N/view?usp=sharing) teknoroma - Katmanlı Mimari .NET E-Ticaret Projesi
+## teknoroma - Katmanlı Mimari .NET E-Ticaret Projesi
 ### Bu proje MVC platformunda katmanlı mimari yapısı ile, strateji ve tasarım desenleri kullanılarak yazılmıştır. 
 * Projeyi çalıştırmak için **Project.WEBUI** içerisinde kök dizinde bulunan **Web.config** dosyasına gidilerek **Connection Strings** local server'inize göre düzenlenmelidir.
 * Proje çalıştırıldıktan sonra veritabanına Bogus kütüphanesi ile fake verilerin veritabanına eklenebilmesi için aşağıdaki kullanıcılardan biri ile giriş yapılmalıdır.     
