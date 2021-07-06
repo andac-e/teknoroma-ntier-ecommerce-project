@@ -5,6 +5,7 @@
 * Siparişin onaylanabilmesi için github profilimdeki **[Bank API](https://github.com/andac-e/bank-api)** projesinin çalışır halde olması gerekmektedir. 
 * Ana katmanların yanı sıra projede **Mail Service**, **Image Uploader** ve **Cryptography** sınıfları bulunmaktadır. 
 * Veritabanına kaydı yapılan tüm kullanıcı parolaları KVKK kapsamında şifrelenerek gönderilmektedir.
+* Admin panelinde ürünler listesinde güncel döviz kurları XML ile **[TCMB](http://www.tcmb.gov.tr/kurlar/today.xml)**'ndan güncel olarak çekilmektedir.
 
 1. Admin
       - Kullanıcı Adı: **admin**
