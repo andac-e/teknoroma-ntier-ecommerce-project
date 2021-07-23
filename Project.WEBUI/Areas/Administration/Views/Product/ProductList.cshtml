@@ -49,7 +49,15 @@
                         <td>@item.ID</td>
                         <td>@item.ProductName</td>
                         <td>@item.UnitPrice</td>
-                        <td class="hidden-phone">@item.UnitsInStock</td>
+                        @if (item.UnitsInStock <= 50)
+                        {
+
+                            <td class="hidden-phone text-danger">@item.UnitsInStock</td>
+                        }
+                        else
+                        {
+                            <td class="hidden-phone">@item.UnitsInStock</td>
+                        }
                         @if (item.Category == null)
                         {
                             <td>Kategori belirtilmemiş</td>

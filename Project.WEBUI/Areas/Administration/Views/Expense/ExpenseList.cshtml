@@ -6,6 +6,26 @@
 
 <div class="panel-body">
     <div class="adv-table">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Euro Alış</th>
+                    <th>Euro Satış</th>
+                    <th>Dolar Alış</th>
+                    <th>Dolar Satış</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@ViewBag.EuroBuy</td>
+                    <td>@ViewBag.EuroSell</td>
+                    <td>@ViewBag.DolarBuy</td>
+                    <td>@ViewBag.DolarSell</td>
+                </tr>
+            </tbody>
+        </table>
+
         <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
             <thead>
                 <tr>

@@ -18,6 +18,7 @@ namespace Project.ENTITIES.Models
 
         [Required(ErrorMessage = "{0} alanı boş geçilemez.")]
         [Display(Name = "Kullanıcı Adı")]
+        [RegularExpression("^[a-zA-Z0-9]+$", ErrorMessage = "Girdiğiniz kullanıcı adı standart formatlara uymamaktadır.")]
         [MinLength(3, ErrorMessage = "{0} minimum {1} karakter olabilir.")]
         [MaxLength(25, ErrorMessage = "{0} maksimum {1} karakter olabilir.")]
         public string UserName { get; set; }

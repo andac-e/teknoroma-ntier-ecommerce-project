@@ -1,6 +1,7 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
 using Project.WEBUI.AuthenticationClasses;
+using Project.WEBUI.Models.Helpers;
 using Project.WEBUI.VMClasses;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,13 @@ namespace Project.WEBUI.Areas.Administration.Controllers
             {
                 Expenses = _eRep.GetActives()
             } : new ExpenseVM { Expenses = _eRep.Where(x => x.ID == id) };
+
+            Currency c = new Currency();
+            ViewBag.EuroSell = c.EuroSell;
+            ViewBag.EuroBuy = c.EuroBuy;
+            ViewBag.DolarSell = c.DolarSell;
+            ViewBag.DolarBuy = c.DolarBuy;
+
             return View(evm);
         }
 
