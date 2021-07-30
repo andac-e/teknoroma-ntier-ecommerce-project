@@ -8,6 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - TEKNOROMA</title>
+    <link rel="icon" href="@Url.Content("~/OuterTools/img/teknoroma-logo.png")" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap  -->
@@ -78,19 +79,19 @@
                         </div>
 
                         @*<li class="dropdown mx-2">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
-                                <span class="username">@user.UserName</span>
-                                <b class="caret"></b>
-                                <i class="fas fa-chevron-down fa-sm text-info"></i>
-                            </a>
-                            <ul class="dropdown-menu extended logout">
-                                <div class="log-arrow-up"></div>
-                                <li><a href="#">Profil</a></li>
-                                <li><a href="#">Siparişlerim</a></li>
-                                <li><a href="@Url.Action("LogOut","Login")">Çıkış Yap <i class="fas fa-sign-out-alt"></i></a></li>
-                            </ul>
-                        </li>*@
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <img alt="" src="~/OuterTools/img/avatar1_small.jpg" style="border-radius:50%">
+                                    <span class="username">@user.UserName</span>
+                                    <b class="caret"></b>
+                                    <i class="fas fa-chevron-down fa-sm text-info"></i>
+                                </a>
+                                <ul class="dropdown-menu extended logout">
+                                    <div class="log-arrow-up"></div>
+                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="#">Siparişlerim</a></li>
+                                    <li><a href="@Url.Action("LogOut","Login")">Çıkış Yap <i class="fas fa-sign-out-alt"></i></a></li>
+                                </ul>
+                            </li>*@
                     }
                     else
                     {

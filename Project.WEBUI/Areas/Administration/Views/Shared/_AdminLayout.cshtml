@@ -13,6 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="@Url.Content("~/OuterTools/img/teknoroma-logo.png")" />
     <meta name="description" content="">
     <meta name="author" content="antinho">
     <meta name="keyword" content="Teknoroma, Admin, Panel, Yönetim, Employee">
@@ -58,7 +59,7 @@
                 <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
             </div>
             <!--logo start-->
-            <a href="~/Home/Index" class="logo"> <img src="~/OuterTools/img/teknoroma-logo.png" id="logo">teknoroma Yönetim Paneli</a>
+            <a href="" class="logo"> <img src="~/OuterTools/img/teknoroma-logo.png" id="logo">teknoroma Yönetim Paneli</a>
             <!--logo end-->
             <div class="top-nav">
                 <!--search & user info start-->
@@ -145,6 +146,16 @@
                             </a>
                             <ul class="sub">
                                 <li><a href="@Url.Action("OrderList", "Order")">Siparişleri Listele</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fas fa-barcode"></i>
+                                <span>Sipariş Detayları</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="@Url.Action("OrderDetailList", "OrderDetail")">Siparişleri Listele</a></li>
                             </ul>
                         </li>
 
