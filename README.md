@@ -1,7 +1,7 @@
 ## teknoroma - Katmanlı Mimari .NET E-Ticaret Projesi
 ### Bu proje MVC platformunda katmanlı mimari yapısı ile, strateji ve tasarım desenleri kullanılarak yazılmıştır. 
 * Projeyi çalıştırmak için **Project.WEBUI** içerisinde kök dizinde bulunan **Web.config** dosyasına gidilerek **Connection Strings** local server'inize göre düzenlenmelidir.
-* Proje çalıştırıldıktan sonra veritabanına Bogus kütüphanesi ile fake verilerin veritabanına eklenebilmesi için aşağıdaki kullanıcılardan biri ile giriş yapılmalıdır.     
+* Proje çalıştırıldıktan sonra Bogus kütüphanesi ile fake verilerin veritabanına eklenebilmesi için aşağıdaki kullanıcılardan biri ile giriş yapılmalıdır.     
 * Siparişin onaylanabilmesi için github profilimdeki **[Bank API](https://github.com/andac-e/bank-api)** projesinin çalışır halde olması gerekmektedir. 
 * Ana katmanların yanı sıra projede **Mail Service**, **Image Uploader** ve **Cryptography** sınıfları bulunmaktadır. 
 * Veritabanına kaydı yapılan tüm kullanıcı parolaları KVKK kapsamında şifrelenerek gönderilmektedir.
